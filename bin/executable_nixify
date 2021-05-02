@@ -1,0 +1,15 @@
+#!/bin/sh
+
+[ -e ./.envrc ] || echo "use nix" > .envrc && direnv allow
+[ -e shell.nix ] || [ -e default.nix ] \
+	|| cp "$HOME/Templates/nixify/$1.nix" default.nix \
+	|| cat > default.nix << 'EOF'
+with import <nixpkgs> {};
+mkShell {
+	nativeBuildInputs = [
+		bashInteractive
+	];
+}
+EOF
+
+${EDITOR} default.nix

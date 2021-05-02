@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[ -z "$1" ] && subcommand="show" || subcommand="otp"
+chosen=$(gopass ls -f | menu)
+
+[ -z "$chosen" ] && exit 1
+
+exec gopass $subcommand -c "$chosen"

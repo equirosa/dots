@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Outputs a video comparing two inputs side by side
+
+ffmpeg -i "$1" -i "$2" -filter_complex hstack comparison.mkv

@@ -1,0 +1,3 @@
+#!/bin/sh
+ln -f "$(realpath "$1")" "$HOME/.local/share/background-image"
+which sway 2> /dev/null && swaymsg reload

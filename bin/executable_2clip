@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[ -z "$1" ] && exit 1
+
+clipboard="wl-copy"
+[ -z "$WAYLAND_DISPLAY" ] && clipboard="xclip"
+
+echo "$1" | $clipboard

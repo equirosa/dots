@@ -1,0 +1,6 @@
+#!/bin/sh
+case "$1" in
+	http*) exec youtube-dl -f best --restrict-filenames -o "$HOME/Videos/watchlist/$(date +%s)-%(title)s.%(ext)s" "$1" 2> /dev/null 1>&2 & ;;
+	"") exec mpv "$HOME/Videos/watchlist/" ;;
+	*) exec mv "$1" "$HOME/Videos/watchlist/$(date +%s)-$1" ;;
+esac

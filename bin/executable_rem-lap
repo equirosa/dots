@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chosen=$(find "$XDG_DATA_HOME/remmina/" -name "*.remmina" | menu)
+
+remmina -c "$chosen"

@@ -1,0 +1,17 @@
+#!/bin/sh
+#LINES=30
+
+show_tumbnail() {
+	CACHE="$(mktemp --suffix=.png)"
+	ffmpegthumbnailer -i "$1" -o "$CACHE" -s 0
+	viu "$CACHE"
+}
+
+case "$1" in
+	*.pdf) pdftotext "$1" - ;;
+	*.png | *.jpg | *jpeg) viu "$1" ;;
+	*.mkv | *.mp4 | *.webm) show_tumbnail "$@" ;;
+	*.rar | *.7z | *.zip | *.tar.*) arc ls "$1" | rev | cut -f1 | rev ;;
+	*.docx | *.odt) pandoc "$1" --to plain ;;
+	*) highlight "$1" -O ansi --force ;;
+esac

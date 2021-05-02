@@ -1,0 +1,6 @@
+#!/bin/sh
+case "$1" in
+	odysee) url="https://lbryfeed.melroy.org/channel/odysee/$2/json" ;;
+esac
+
+2clip "$url"

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tar -cvaf "$1.tar.zst" "$1"

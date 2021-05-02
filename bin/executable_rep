@@ -1,0 +1,3 @@
+#!/bin/sh
+
+torsocks curl https://emailrep.io/"$1"

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+[ -x "$(command -v optipng)" ] \
+	&& find . -name "*.png" -exec optipng -o7 {} \;
+
+[ -x "$(command -v jpegoptim)" ] \
+	&& for ext in jpg jpeg; do
+		find . -name "*.$ext" -exec jpegoptim --strip-all {} \;
+	done
+
+[ -x "$(command -v mkclean)" ] \
+	&& find . -name "*.mkv" -exec mkclean --optimize {} \;

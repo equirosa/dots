@@ -1,0 +1,17 @@
+#!/bin/sh
+
+gpgdecrypt() {
+	out="$(echo "$1" | sed 's/.gpg//g')"
+	gpg --output "$out" --decrypt "$1"
+}
+
+case "$1" in
+	*.gpg) gpgdecrypt "$@" ;;
+	*) echo "I can't decrypt that..." ;;
+esac
+
+if [ -f "$out" ]; then
+	notify-send -t 5000 "✅ file decrypted"
+else
+	notify-send -t 5000 "❌ decryption failed"
+fi

@@ -1,0 +1,19 @@
+#!/bin/sh
+case "$1" in
+	*odysee.com* | *tube* | *twitch* | \
+		*tilvids* | *videos.* | *youtu.be* | *invidio*) umpv "$1" & ;;
+	#*twitch* ) streamlink -p mpv "$1" best ;;
+	magnet* | *.torrent)
+		transmission-remote -a "$1" \
+			&& notify-send "Torrent Added! 酪" && exit 0
+		;;
+	http*)
+		case "$1" in
+			*.jpg | *.png) curl -L "$1" -o "/tmp/image" && $IMG "/tmp/image" && exit 0 ;;
+			*) $XDGOPEN "$1" ;;
+		esac
+		;;
+	*.jpeg | *.jpg | *.png) "$IMG" "$1" && exit 0 ;;
+	mailto*) aerc "$1" ;;
+	*) $XDGOPEN "$1" ;;
+esac

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+7z a -l "$1.zip" "$1"
+notify-send "zipped!"

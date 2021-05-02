@@ -1,0 +1,5 @@
+#!/bin/sh
+
+OUTPUT="$(swaymsg -t get_outputs | jq '.[] | .name' | fzf | sed 's/"//g')"
+
+echo "$OUTPUT"

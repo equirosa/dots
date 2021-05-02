@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wayland Screenshot wrapper for grim, slurp and swappy
+
+grim -g "$(gway)" - | swappy -f -

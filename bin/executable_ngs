@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nix-prefetch-github-latest-release "$1" "$2" | jq '.sha256' | wl-copy

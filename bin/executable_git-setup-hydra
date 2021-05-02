@@ -1,0 +1,6 @@
+#!/bin/sh
+[ ! -d ".git" ] && git init
+
+git remote add origin "git@git.sr.ht:~eduardo_quiros/$1"
+#git remote add gl_mirror "git@gitlab.com:equirosa/$1.git"
+git remote add gh_mirror "git@github.com:equirosa/$1.git"

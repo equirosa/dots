@@ -1,0 +1,3 @@
+#!/bin/sh
+youtube-dl --convert-subs srt --all-subs -f bestvideo+bestaudio --restrict-filenames -o "%(title)s.%(ext)s" \
+	"$1"

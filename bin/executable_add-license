@@ -1,0 +1,7 @@
+#!/bin/sh
+
+chosen="$(licensor -l | menu)"
+
+[ -z "$chosen" ] && exit 1
+
+licensor "$chosen" > LICENSE

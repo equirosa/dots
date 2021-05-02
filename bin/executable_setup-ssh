@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# TODO: make this thing set up more than just the ssh keys
+for key in codeberg github sourcehut gitlab remote-website vultr-debian azure-devops; do
+	[ -f ~/.ssh/"$key" ] \
+		|| ssh-keygen -o -a 100 -t ed25519 -f "$HOME/.ssh/$key" -C "$(hostname)" \
+		&& ssh-add "$HOME/.ssh/$key"
+done
