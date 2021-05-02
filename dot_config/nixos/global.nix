@@ -30,7 +30,7 @@
   };
   hardware.cpu.amd.updateMicrocode = true;
   nix = {
-    #package = pkgs.nixUnstable;
+    package = pkgs.nixUnstable;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
@@ -57,7 +57,6 @@
         aerc # Mail reader
         dino # XMPP client
         discord
-        element-desktop
         mumble # Cool voice chat
         toot # Mastodon client
         tut # Mastodon client
