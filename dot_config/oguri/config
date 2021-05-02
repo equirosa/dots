@@ -1,0 +1,11 @@
+[output DP-1]
+image=/home/eduardo/RWBY_-_Volume_1-8_Openings_60FPS_Test.gif
+filter=nearest
+scaling-mode=fill
+anchor=center
+
+[output HDMI-A-1]
+image=/home/eduardo/RWBY_-_Volume_1-8_Openings_60FPS_Test.gif
+filter=nearest
+scaling-mode=fill
+anchor=center

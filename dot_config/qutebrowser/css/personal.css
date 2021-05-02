@@ -1,0 +1,45 @@
+:root {
+	/*Handle background and foreground.*/
+	--gruvbox-background: #1d2021;
+	--gruvbox-foreground: #ebdbb2;
+	/*Normal colors.*/
+	--gruvbox-black: #282828;
+	--gruvbox-red: #cc241d;
+	--gruvbox-green: #98971a;
+	--gruvbox-blue: #458588;
+	--gruvbox-white: #a89984;
+	/*Bright colors.*/
+	--gruvbox-bright-black: #928374;
+	--gruvbox-bright-blue: #83a598;
+}
+
+code, #wrapper, .game_column, #wrap, body, p, .mw-body, .toc, #content, .p-5, p-6, .pagehead {
+	background-color: var(--gruvbox-background) !important;
+	color: var(--gruvbox-foreground) !important;
+}
+
+h1, h2, h3, h4, h5, h6, .text-gray-dark {
+	color: var(--gruvbox-foreground) !important;
+}
+
+pre {
+	background-color: var(--gruvbox-bright-black) !important;
+}
+
+/*Handle some link styles*/
+a {
+	color: var(--gruvbox-blue);
+}
+
+a:hover{
+	color: var(--gruvbox-bright-blue);
+}
+
+/*Arch wiki stuff*/
+div.archwiki-template-box.archwiki-template-box-warning {
+	background-color: var(--gruvbox-red);
+}
+div.archwiki-template-box.archwiki-template-box-tip {
+	background-color: var(--gruvbox-green);
+}
+/*Arch wiki stuff*/

@@ -1,0 +1,197 @@
+﻿\documentclass{article}
+
+% ---------------------------------------------------------
+% GLOBAL SETTINGS
+% ---------------------------------------------------------
+
+% Icons
+\usepackage{fontawesome}
+
+% Page geometry
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  top=20mm,
+  right=20mm,
+}
+
+% Additional commands for spacing
+\usepackage{setspace}
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+}
+
+% List customization
+\renewcommand\labelitemi{---}
+\usepackage{enumitem}
+
+% Table customization
+\setlength{\tabcolsep}{0ex}
+
+% Header/Footer customization.
+\usepackage{fancyhdr}
+
+% ---------------------------------------------------------
+% COMMANDS
+% ---------------------------------------------------------
+
+% Title
+\newcommand*{\applicant}[1]{\gdef\applicanttext{#1}}
+\newcommand*{\github}[1]{\gdef\githubtext{#1}}
+\newcommand*{\email}[1]{\gdef\emailtext{#1}}
+\newcommand*{\skype}[1]{\gdef\skypetext{#1}}
+\newcommand*{\linkedin}[1]{\gdef\linkedintext{#1}}
+\newcommand*{\location}[1]{\gdef\locationtext{#1}}
+\newcommand*{\phone}[1]{\gdef\phonetext{#1}}
+
+\renewcommand\maketitle{
+  {\setstretch{1.2}
+    \centerline{
+       \textbf{\huge{\expandafter\MakeUppercase\expandafter{\applicanttext}}}
+    }
+    \begin{center}
+      \ifdefined\emailtext
+        \faEnvelopeO \hspace{0.1cm} \emailtext \hspace{0.1cm}
+      \fi
+      \ifdefined\githubtext
+        \faGithub \hspace{0.1cm} \githubtext \hspace{0.1cm}
+      \fi
+      \ifdefined\skypetext
+        \faSkype \hspace{0.1cm} \skypetext \hspace{0.1cm}
+
+      \fi
+      \ifdefined\linkedintext
+        \faLinkedin \hspace{0.1cm} \linkedintext
+
+      \fi
+    \end{center}
+
+    \begin{center}
+      \ifdefined\locationtext
+        \faHome \hspace{0.1cm} \locationtext \hspace{0.1cm}
+      \fi
+      \ifdefined\phonetext
+        \faMobile \hspace{0.1cm} \phonetext \hspace{0.1cm}
+
+      \fi
+    \end{center}
+  }
+}
+
+% Section
+\newcommand{\cvsection}[1]{
+  \vspace{2.6ex}
+  \noindent\textbf{\large{\uppercase{#1}}}
+  \vspace{1ex}
+  \hrule
+  \vspace{1.5ex}
+}
+
+% Paragraph header
+\newcommand{\cvparagraph}[3]{
+  \noindent\indent
+  \textbf{#1}
+  \ 
+  \textit{#2}
+  \ 
+  \hfill{}
+  {#3}\vspace{1ex}}
+
+% Table formatting
+\newcommand{\cvtable}[1]{
+  {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{p{\dimexpr.4\textwidth-1\parindent}p{\dimexpr.6\textwidth}}
+      #1
+    \end{tabular}}
+}
+
+% List formatting
+\newcommand{\cvlist}[1]{
+  \begin{itemize}[topsep=0ex,leftmargin=*,itemsep=0ex,parsep=1ex,labelwidth=\parindent]
+    #1
+  \end{itemize}
+}
+
+% ---------------------------------------------------------
+% CV
+% ---------------------------------------------------------
+
+\begin{document}
+
+% Footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{ \the\year }
+
+% Name and links
+\applicant{Alexander Rogachev}
+\github{https://github.com/cog1to}
+\email{sorryforbadname@gmail.com}
+\skype{skype://rogachev.alex}
+\location{Ivanovo, Russia}
+\phone{+7-915-817-2792}
+
+% Title
+\maketitle
+
+% Position
+\cvsection{Position}
+Mid/Senior iOS Developer
+
+% Education
+\cvsection{Education}
+\cvparagraph{Ivanovo State University of Chemistry and Technology (ISUCT)}{}{2006 - 2012}
+\begin{itemize}[topsep=0ex,leftmargin=*]
+  \item M.S. Information Technology
+\end{itemize}
+
+% Experience
+\cvsection{Work Experience}
+
+\cvparagraph{Avito}{iOS Developer @ Messenger}{2019 - Present}
+\cvlist{
+  \item Participating in the architecture design \& development of a Messenger module of Avito iOS app [\href{https://apps.apple.com/ru/app/\%D0\%B0\%D0\%B2\%D0\%B8\%D1\%82\%D0\%BE-\%D0\%BE\%D0\%B1\%D1\%8A\%D1\%8F\%D0\%B2\%D0\%BB\%D0\%B5\%D0\%BD\%D0\%B8\%D1\%8F/id417281773}{link}], one of the top C2C trading platforms in Russia.
+}
+\vspace{1ex}
+
+\cvparagraph{Akvelon}{Senior iOS Developer \& SDET}{2014 - Present}
+\cvlist{
+  \item Leading the development of an iOS client for Intapp product family [\href{https://itunes.apple.com/us/app/intapp/id1052877767}{link}], integrating multiple back-end services in a single mobile app.
+  \item Maintaining and expanding API server code for one of the Intapp's products written in ASP.NET MVC.
+  \item Developing and maintaning UI test automation solution for iOS and Android clients.
+  \item Developed an in-house UI automation framework for Smartsheet iPhone and iPad apps [\href{https://itunes.apple.com/us/app/smartsheet/id568421135}{link}], including fixture server and CI with report gathering. Led the initial effort of automating existing test plans.
+}
+\vspace{1ex}
+
+\cvparagraph{Akvelon}{Junior Mobile Developer \& SDET}{2010 - 2014}
+\cvlist{
+  \item Developed a camera control application for prototype Android devices with enhanced digital cameras and proprietary firmware.
+  \item Developed an over-WiFi video streaming application for iOS devices based on UDP protocol and ffmpeg [\href{http://neuronbeta.com/chirpglobal/chirpvision/app/}{link}].
+  \item Developed a UI test automation solution for LinkedIn iOS applications.
+  \item Developed an iOS app for performing data copy and data backup via socket-based peer-to-peer connection between Android, iOS and Blackberry devices.
+  \item Developed a marketing application for T-Mobile.
+  \item Developed an Android activity-tracking application with Microsoft CRM integration.
+}
+
+% Skills
+\cvsection{Skills}
+\cvtable{
+  \textbf{Main languages:} & Swift, Objective C \\
+  \textbf{Secondary languages:} & Java, C\#, JS \\
+  \textbf{Main platform:} & iOS \\
+  \textbf{Frameworks/Libraries/Tools:} & MVC, MVP, MVVM, UIKit, CoreData, RxSwift, Realm, AFNetworking, Carthage, CocoaPods, Appium, XCTest, SQL, Bash, Git, Mercurial, Jira, Xcode, Instruments, ...
+}
+
+% Languages
+\cvsection{Languages}
+\cvtable{
+  \textbf{Russian:} & Native \\
+  \textbf{English:} & Advanced \\
+}
+
+\end{document}

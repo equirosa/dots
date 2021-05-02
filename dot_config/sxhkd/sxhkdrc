@@ -1,0 +1,48 @@
+super + Return
+  $TERMINAL & disown
+
+super + shift + e
+	emacsclient -c
+
+super + a
+	$TERMINAL -e pulsemixer
+
+super + d
+	dmenu_run -i &
+
+super + i
+	$TERMINAL -e $MONITOR & disown
+
+super + e
+  $TERMINAL -e $MAIL & disown
+
+XF86Mail
+	$TERMINAL -e $MAIL
+
+super + r
+  $TERMINAL -e $FILE & disown
+
+super + w
+	tor-browser
+
+super + shift + w
+  $BROWSER & disown
+
+super + x
+	$LOCK_CMD
+
+# Audio stuff
+XF86AudioMute
+	amixer sset Master toggle
+
+XF86Audio{Raise,Lower}Volume
+	amixer sset Master 5%{+,-}
+
+XF86Audio{Play,Stop,Next,Prev}
+	mpc {toggle,stop,next,prev}
+
+Print
+	maim -s "$HOME/Pictures/screenshots/$(date --iso-8601=ns)".png
+
+super + q
+	xdo close

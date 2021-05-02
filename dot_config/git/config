@@ -1,0 +1,24 @@
+[alias]
+	ca = commit -a
+	fire = commit -am 'Fire!!!' && push
+	pl = pull
+	ps = push
+	s = status
+[commit]
+	gpgSign = true
+[merge]
+	tool = nvim
+[mergetool]
+	prompt = false
+[mergetool "nvim"]
+	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[user]
+	email = eduardo@eduardoquiros.com
+	name = Eduardo Quiros
+	signingKey = 03678E9642EB6D9E99974ACFB77F36C3F12720B4
+[pull]
+	rebase = false
+[init]
+	defaultBranch = trunk
+[advice]
+	addIgnoredFile = false

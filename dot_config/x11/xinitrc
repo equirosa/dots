@@ -1,0 +1,14 @@
+#!/bin/sh
+#      _       _ _
+#__  _(_)_ __ (_) |_ _ __ ___
+#\ \/ / | '_ \| | __| '__/ __|
+# >  <| | | | | | |_| | | (__
+#/_/\_\_|_| |_|_|\__|_|  \___|
+
+sxhkd &
+picom &
+redshift &
+xrandr -r 144
+xrandr --output HDMI-1 --right-of DP-1 --mode 1920x1080 -r 60
+xidlehook --timer 300 "slock" "" & disown
+exec i3
