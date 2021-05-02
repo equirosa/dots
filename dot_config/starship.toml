@@ -1,0 +1,14 @@
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hostname]
+ssh_only = true
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "
