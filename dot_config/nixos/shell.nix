@@ -39,6 +39,7 @@
           chap = "chezmoi apply";
           chc = "chezmoi cd";
           chd = "chezmoi diff";
+          che = "chezmoi edit";
           cat = "bat -p";
           dg = "dragon -a -x";
           yd = "youtube-dl";
