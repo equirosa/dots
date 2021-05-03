@@ -99,6 +99,10 @@
         nixpkgs-fmt
         shfmt
 
+        # LSPs
+        rnix-lsp
+        sumneko-lua-language-server
+
         # Pictures
         imv # Image viewer
         swappy # quick image editing
