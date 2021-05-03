@@ -37,9 +37,9 @@ bindsym {
 	$mod+m exec $TERMINAL $MUSIC
 	$mod+z exec gopassmenu
 	$mod+Shift+z exec gopassmenu otp
-	$mod+q kill #Kill container
-	$mod+d exec $menu #Launch wofi in command mode
-	$mod+x exec $lock #Lock screen
+	$mod+q kill
+	$mod+d exec $menu
+	$mod+x exec $lock
 	$mod+Shift+x exec amixer sset Master toggle && $lock
     # Move your focus around
 	$mod+$left focus left
