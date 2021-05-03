@@ -125,6 +125,7 @@
         autotiling
         bc
         bottom
+        chezmoi
         cryfs
         czkawka
         freerdp
