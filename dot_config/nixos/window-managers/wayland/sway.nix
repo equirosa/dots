@@ -18,12 +18,12 @@
         gammastep # Control Red Hue
         i3-wk-switch
         i3status-rust
+        nwg-launchers
         qt5.qtwayland # QT compat
         swayidle
         swaylock
         wf-recorder # screen video capture
         wl-clipboard # clipboard
-        wofi
         xwayland # Xorg compat
         # screenshots
         grim
@@ -33,7 +33,6 @@
       ];
       extraSessionCommands = ''
         export TERMINAL=foot
-        export DMENU="${pkgs.wofi}/bin/wofi -id -M fuzzy"
         export XDG_SESSION_TYPE=wayland
         export XDG_CURRENT_DESKTOP=sway
         export SDL_VIDEODRIVER=wayland
