@@ -14,7 +14,7 @@ return require('packer').startup(function()
 	use {'tpope/vim-fugitive'}
 
 	--language stuff
---	use {'LnL7/vim-nix', ft = 'nix'} -- Nix
+	use {'sheerun/vim-polyglot'}
  	-- Lua
 	use {'tjdevries/nlua.nvim'}
 	use {'euclidianAce/BetterLua.vim'}
