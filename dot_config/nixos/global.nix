@@ -3,7 +3,6 @@
     <home-manager/nixos>
     ./audio.nix
     ./backups/external.nix
-    ./editors/emacs.nix
     ./editors/neovim.nix
     ./flatpak.nix
     ./home.nix

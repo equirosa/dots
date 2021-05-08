@@ -45,6 +45,8 @@ local on_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
+
+  require'completion'.on_attach()
 end
 
 -- Use a loop to conveniently both setup defined servers
