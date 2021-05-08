@@ -25,7 +25,7 @@ utils.opt('o', 'clipboard','unnamed,unnamedplus')
 utils.opt('o', 'incsearch', true)
 utils.opt('o', 'mouse', 'a')
 utils.opt('o', 'undofile', true)
-utils.opt('o', 'undodir', '~/.local/share/nvim/undodir')
+utils.opt('o', 'undodir', '/home/eduardo/.local/share/nvim/undodir')
 
 -- window
 utils.opt('w', 'number', true)
