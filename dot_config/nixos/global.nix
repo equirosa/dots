@@ -23,6 +23,7 @@
   ];
   boot = {
     kernelPackages = pkgs.linuxPackages_latest_hardened;
+    tmpOnTmpfs = true;
   };
   environment = {
     homeBinInPath = true;
