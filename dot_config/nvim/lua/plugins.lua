@@ -1,7 +1,9 @@
 return require('packer').startup(function()
 	use {'wbthomason/packer.nvim', opt = true}
 
+	-- theming
 	use {'sainnhe/gruvbox-material' }
+	use {'kyazdani42/nvim-web-devicons'}
 
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -10,6 +12,7 @@ return require('packer').startup(function()
 
 	use {'neovim/nvim-lspconfig'}
 	use {'nvim-lua/completion-nvim'}
+	use {'preservim/nerdcommenter'}
 
 	use {'tpope/vim-fugitive'}
 
