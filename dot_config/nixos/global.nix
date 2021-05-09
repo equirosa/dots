@@ -96,6 +96,7 @@
 
         # Formatters
         black
+        luaformatter
         nixpkgs-fmt
         shfmt
 
