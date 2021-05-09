@@ -1,9 +1,5 @@
-vim.g.mapleader = ' '
-
-require('settings')
-require('colorscheme')
-require('keymappings')
 require('plugins')
-require('completion')
-require('lsp_lua')
-
+require('modules._settings')
+require('modules.theme')
+require('modules.lsp')
+require('modules.mappings')
