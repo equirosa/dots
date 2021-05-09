@@ -11,7 +11,6 @@ return require('packer').startup(function()
 	}
 
 	use {'neovim/nvim-lspconfig'}
-	use {'nvim-lua/completion-nvim'}
 	use {'preservim/nerdcommenter'}
 
 	use {'tpope/vim-fugitive'}
