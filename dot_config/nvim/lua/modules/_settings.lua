@@ -30,7 +30,7 @@ opt('w', 'number', true) -- Print line number
 opt('w', 'relativenumber', true) -- Relative line numbers
 
 -- Tabs & Spaces
-opt('b', 'expandtab', true) -- Use spaces instead of tabs
+opt('b', 'expandtab', false) -- DON'T use spaces instead of tabs
 opt('b', 'shiftwidth', indent) -- Size of an indent
 opt('b', 'smartindent', true) -- Insert indents automatically
 opt('b', 'softtabstop', indent)
