@@ -2,8 +2,15 @@ return require('packer').startup(function()
 	use {'wbthomason/packer.nvim', opt = true}
 
 	-- theming
-	use {'sainnhe/gruvbox-material' }
-	use {'kyazdani42/nvim-web-devicons'}
+	use {
+		'sainnhe/gruvbox-material','kyazdani42/nvim-web-devicons'
+	}
+
+	-- Git
+	use {
+		'tpope/vim-fugitive',
+		{'lewis6991/gitsigns.nvim',	requires = {'nvim-lua/plenary.nvim'}}
+	}
 
 	-- Telescope
 	use {
@@ -15,14 +22,28 @@ return require('packer').startup(function()
 		}
 	}
 
-	use {'neovim/nvim-lspconfig'}
+	-- LSP
+	use {
+		'neovim/nvim-lspconfig','onsails/lspkind-nvim',
+		'glepnir/lspsaga.nvim',
+		{
+			'mhartington/formatter.nvim',
+			opt = true, cmd = 'Format',
+			requires = {'andrejlevkovitch/vim-lua-format'}
+		}
+	}
 	use {'preservim/nerdcommenter'}
-
-	use {'tpope/vim-fugitive'}
 
 	--language stuff
 	use {'sheerun/vim-polyglot'}
  	-- Lua
 	use {'tjdevries/nlua.nvim'}
 	use {'euclidianAce/BetterLua.vim'}
+
+	--use {
+		--'glepnir/galaxyline.nvim',
+		--branch = 'main',
+		--config = function() require'my_statusline' end,
+		--requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	--}
 end)
