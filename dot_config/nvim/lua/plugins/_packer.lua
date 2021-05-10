@@ -69,7 +69,8 @@ return require('packer').startup(function(use)
             'p00f/nvim-ts-rainbow', {
                 'JoosepAlviste/nvim-ts-context-commentstring',
                 requires = {'tpope/vim-commentary'}
-            }, {'nvim-treesitter/playground', opt = true}
+            }, {'nvim-treesitter/playground', opt = true},
+            {'cstrahan/tree-sitter-nix', opt = true}
         }
     }
 
