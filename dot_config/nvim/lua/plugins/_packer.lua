@@ -1,6 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
--- git clone https://github.com/wbthomason/packer.nvim\
---  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 return require('packer').startup(function(use)
     -- To handle Lua configuration
     use {'wbthomason/packer.nvim', 'tami5/sql.nvim'}
