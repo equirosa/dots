@@ -1,3 +1,3 @@
 #!/bin/sh
 
-nwgdmenu "$1"
+wofi -S dmenu "$1"
