@@ -1,5 +1,5 @@
 # This file is used mostly to force XDG Desktop Specification compliance in some programs.
-{ config, lib, options, modulesPath }: {
+{ config, ... }: {
   environment = {
     shellAliases = {
       startx = "startx $XDG_CONFIG_HOME/x11/xinitrc";
