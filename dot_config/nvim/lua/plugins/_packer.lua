@@ -49,7 +49,8 @@ return require('packer').startup(function(use)
     -- UI/UX
     use {
         'RRethy/vim-illuminate', -- 'glepnir/dashboard-nvim',
-        'Yggdroot/indentLine', 'wellle/context.vim', -- Shows the function name you are working on
+        {'lukas-reineke/indent-blankline.nvim', branch = 'lua'},
+        'wellle/context.vim', -- Shows the function name you are working on
         'gennaro-tedesco/nvim-peekup', -- view register contents
         'norcalli/nvim-colorizer.lua', -- colored hex codes
         {'akinsho/nvim-bufferline.lua', opt = true},
