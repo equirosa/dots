@@ -15,6 +15,7 @@ vim.cmd 'au FileType css,scss,sass,html setlocal spell spelllang=en_us'
 vim.cmd 'autocmd TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
 -- Sane defaults
+opt('o', 'mouse', 'a')
 opt('o', 'hidden', true) -- Round indent
 opt('o', 'scrolloff', 5) -- Lines of context
 opt('o', 'shiftround', true) -- Round indent
