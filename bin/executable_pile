@@ -1,19 +1,23 @@
 #!/bin/sh
 
+file="$(realpath "$1")"
+directory="${file%/*}"
+basename="${file%.*}"
+extension="${file##*.}"
+
 latex_cleanup() {
-	file="$(echo "$1" | sed "s/.tex//")"
 	for ext in aux out log; do
-		rm "$file.$ext"
+		rm "$basename.$ext"
 	done
 }
 
-case "$1" in
-	*.c) cc "$1" -o "$1" ;;
-	*.cpp) c++ "$1" -o "$1" ;;
-	*.md) pandoc "$1" -o "$1.pdf" && rename ".md" "" "$1.pdf" ;;
-	*.ms) groff -k -ms "$1" >> "$1.pdf" && rename ".ms" "" "$1.pdf" ;;
-	*.org) pandoc "$1" -o "$1.pdf" && rename ".org" "" "$1.pdf" ;;
-	*.tex)
+case "$extension" in
+	c) cc "$file" -o "$basename" ;;
+	cpp) c++ "$file" -o "$basename" ;;
+	md) pandoc -t ms --highlight-style kate -s -o "$basename".pdf "$file" ;;
+	ms) groff -k -ms "$file" >> "$basename.pdf" ;;
+	org) pandoc "$file" -o "$basename.pdf" ;;
+	tex)
 		xelatex "$1"
 		latex_cleanup "$@"
 		;;
