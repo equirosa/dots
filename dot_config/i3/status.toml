@@ -9,7 +9,7 @@ sway_kb_identifier = "1133:16494:Logitech_K800"
 [[block]]
 block = "disk_space"
 path = "/home"
-alias = "🏠"
+alias = "💽"
 info_type = "available"
 unit = "GB"
 interval = 1
