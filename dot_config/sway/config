@@ -205,7 +205,7 @@ bar {
 }
 
 # Windows
-default_border pixel #alters window borders (normal,pixel,none)
+default_border pixel 5 #alters window borders (normal,pixel,none)
 
 #smart_gaps on # Maximizes size of window when it is the only window in a workspace
 bindsym $mod+s gaps outer current plus 5
