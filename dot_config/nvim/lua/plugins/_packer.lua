@@ -85,7 +85,8 @@ return require('packer').startup(function(use)
             cmd = 'Format',
             requires = {'andrejlevkovitch/vim-lua-format'}
         }, {'jose-elias-alvarez/nvim-lsp-ts-utils', opt = false}, -- typescript
-        {'mfussenegger/nvim-jdtls', opt = false} -- java
+        {'mfussenegger/nvim-jdtls', opt = false}, -- java
+        {'mfussenegger/nvim-dap'}
     }
 
     -- Snippets
