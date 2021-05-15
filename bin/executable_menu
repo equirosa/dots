@@ -1,3 +1,4 @@
 #!/bin/sh
 
-wofi -S dmenu "$1"
+bemenu -m "$(sway-get-focus)" -il 10 "$1"
+

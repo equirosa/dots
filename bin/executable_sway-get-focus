@@ -1,0 +1,10 @@
+#!/bin/sh
+
+main_is_focused="$(swaymsg -t get_outputs | jq 'map(.focused)' | tail -n 3 | head -n 1)"
+
+case $main_is_focused in
+	*"f"* ) monitor="2" ;;
+	*"t"* ) monitor="1";;
+esac
+
+echo "$monitor"

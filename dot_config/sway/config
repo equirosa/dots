@@ -5,7 +5,7 @@ set {
     $down j
     $up k
     $right l
-    $menu wofi -S run | xargs swaymsg exec
+    $menu menu-run | xargs swaymsg exec
 	$lock exec swaylock
 	$wp_command mpvpaper -o "no-audio --loop-playlist"
 	$dyn_wp "/home/eduardo/Videos/dynamic_wallpapers/ruby_rose.mp4"

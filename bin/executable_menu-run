@@ -1,0 +1,4 @@
+#!/bin/sh
+
+bemenu-run -m "$(sway-get-focus)" -il 10 "$1"
+

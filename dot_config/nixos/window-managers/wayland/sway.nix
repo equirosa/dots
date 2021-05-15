@@ -13,6 +13,7 @@
       enable = true;
       extraPackages = with pkgs; [
         #libsixel
+        bemenu
         brightnessctl
         foot
         gammastep # Control Red Hue
