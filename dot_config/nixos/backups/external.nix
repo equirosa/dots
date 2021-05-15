@@ -12,6 +12,7 @@
       ];
       extraPruneArgs = "--save-space";
       paths = [
+        "/home/eduardo/.local/share/chezmoi"
         "/home/eduardo/Documents"
         "/home/eduardo/Pictures"
         "/home/eduardo/Videos"
