@@ -16,9 +16,7 @@
         brightnessctl
         foot
         gammastep # Control Red Hue
-        i3-wk-switch
         i3status-rust
-        nwg-launchers
         qt5.qtwayland # QT compat
         swayidle
         swaylock
