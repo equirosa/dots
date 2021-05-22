@@ -9,7 +9,7 @@
       )
     )
   ];
-  home-manager.users.eduardo = {
+  home-manager.users.kiri = {
     home.packages = with pkgs; [ sqlite plantuml ];
     programs.emacs = {
       enable = true;

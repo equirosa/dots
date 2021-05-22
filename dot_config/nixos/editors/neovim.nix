@@ -8,7 +8,7 @@
       )
     )
   ];
-  users.users.eduardo.packages = with pkgs; [
+  users.users.kiri.packages = with pkgs; [
     neovim-nightly
   ];
 }

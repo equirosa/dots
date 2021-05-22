@@ -7,23 +7,23 @@
     };
     variables = {
       # General XDG variables
-      XDG_CONFIG_HOME = "/home/eduardo/.config";
-      XDG_DATA_HOME = "/home/eduardo/.local/share";
-      XDG_CACHE_HOME = "/home/eduardo/.cache";
+      XDG_CONFIG_HOME = "/home/kiri/.config";
+      XDG_DATA_HOME = "/home/kiri/.local/share";
+      XDG_CACHE_HOME = "/home/kiri/.cache";
       # Forcing compliance
-      CARGO_HOME = "/home/eduardo/.local/share/cargo";
-      GOPATH = "/home/eduardo/.local/share/go";
-      HISTFILE = "/home/eduardo/.cache/history";
-      GTK2_RC_FILES = "/home/eduardo/.config/gtk-2.0/gtkrc";
-      IDEA_PROPERTIES = "/home/eduardo/.config/intellij-idea/idea.properties";
-      IDEA_VM_OPTIONS = "/home/eduardo/.config/intellij-idea/idea64.vmoptions";
+      CARGO_HOME = "/home/kiri/.local/share/cargo";
+      GOPATH = "/home/kiri/.local/share/go";
+      HISTFILE = "/home/kiri/.cache/history";
+      GTK2_RC_FILES = "/home/kiri/.config/gtk-2.0/gtkrc";
+      IDEA_PROPERTIES = "/home/kiri/.config/intellij-idea/idea.properties";
+      IDEA_VM_OPTIONS = "/home/kiri/.config/intellij-idea/idea64.vmoptions";
       LESSHISTFILE = "-"; # Disable less history file
-      PASSWORD_STORE_DIR = "/home/eduardo/.local/share/password-store";
-      UNISON = "/home/eduardo/.local/share/unison";
-      WEECHAT_HOME = "/home/eduardo/.config/weechat";
-      XCOMPOSEFILE = "/home/eduardo/.config/X11/xcompose";
-      XCOMPOSECACHE = "/home/eduardo/.cache/X11/xcompose";
-      ZDOTDIR = "/home/eduardo/.config/zsh";
+      PASSWORD_STORE_DIR = "/home/kiri/.local/share/password-store";
+      UNISON = "/home/kiri/.local/share/unison";
+      WEECHAT_HOME = "/home/kiri/.config/weechat";
+      XCOMPOSEFILE = "/home/kiri/.config/X11/xcompose";
+      XCOMPOSECACHE = "/home/kiri/.cache/X11/xcompose";
+      ZDOTDIR = "/home/kiri/.config/zsh";
     };
   };
 }

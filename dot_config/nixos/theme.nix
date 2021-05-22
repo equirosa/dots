@@ -23,7 +23,7 @@
       twitter-color-emoji
     ];
   };
-  home-manager.users.eduardo = { pkgs, ... }: {
+  home-manager.users.kiri = { pkgs, ... }: {
     gtk = {
       enable = true;
       iconTheme = {

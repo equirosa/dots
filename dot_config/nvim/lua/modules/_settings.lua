@@ -42,7 +42,7 @@ opt('b', 'tabstop', indent) -- Number of spaces tabs count for
 opt('b', 'undofile', true)
 opt('o', 'backup', false)
 opt('o', 'swapfile', false)
-opt('o', 'undodir', '/home/eduardo/.local/share/nvim/undodir')
+opt('o', 'undodir', '/home/kiri/.local/share/nvim/undodir')
 
 -- Text & Breaks
 opt('b', 'textwidth', 79)

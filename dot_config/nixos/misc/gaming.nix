@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  users.users.eduardo.packages = with pkgs; [
+  users.users.kiri.packages = with pkgs; [
     chiaki # PS4 Remote Play utility
     eidolon
     lutris # General games client

@@ -1,7 +1,7 @@
 { config, ... }: {
   home-manager = {
     useGlobalPkgs = true;
-    users.eduardo = { pkgs, ... }: {
+    users.kiri = { pkgs, ... }: {
       home = {
         sessionVariables = {
           PATH = "$HOME/bin:$PATH";
@@ -95,7 +95,7 @@
         };
         mpd = {
           enable = true;
-          musicDirectory = "/home/eduardo/Music";
+          musicDirectory = "/home/kiri/Music";
           extraConfig = ''
             audio_output {
             type "pulse"

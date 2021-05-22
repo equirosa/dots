@@ -2,7 +2,7 @@
   environment.pathsToLink = [ "/share/zsh" ];
   #programs.zsh.enable = true;
   programs.fish.enable = true;
-  home-manager.users.eduardo = {
+  home-manager.users.kiri = {
     programs = {
       bash.enable = true;
       zsh = {
@@ -157,5 +157,5 @@
       zoxide = { enable = true; };
     };
   };
-  users.users.eduardo.shell = pkgs.fish;
+  users.users.kiri.shell = pkgs.fish;
 }

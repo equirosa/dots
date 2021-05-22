@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  home-manager.users.eduardo = { pkgs, ... }: {
+  home-manager.users.kiri = { pkgs, ... }: {
     programs = {
       mako = {
         enable = true;

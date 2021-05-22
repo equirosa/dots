@@ -9,7 +9,6 @@
     ./location.nix
     ./misc/cleanup.nix
     ./misc/gaming.nix
-    ./packages/insecure.nix
     ./packages/unfree.nix
     ./printing.nix
     ./security.nix
@@ -37,7 +36,7 @@
   };
   users = {
     mutableUsers = false;
-    users.eduardo = {
+    users.kiri = {
       createHome = true;
       description = "Eduardo Quiros";
       extraGroups = [ "wheel" "video" "audio" ];
