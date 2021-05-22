@@ -7,7 +7,5 @@
       "steam"
       "steam-runtime"
       "steam-original"
-      "zoom-us" # School stuff
-      "faac" # Unsure of where this is from, probably Zoom
     ];
 }
