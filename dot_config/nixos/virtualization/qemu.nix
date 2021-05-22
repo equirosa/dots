@@ -5,11 +5,6 @@
       enable = true;
       qemuRunAsRoot = false;
     };
-    virtualbox = {
-      host = {
-        #enable = true;
-      };
-    };
   };
   users.users.kiri = {
     extraGroups = [ "libvirtd" ];
