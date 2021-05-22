@@ -12,16 +12,16 @@
       ];
       extraPruneArgs = "--save-space";
       paths = [
-        "/home/eduardo/.local/share/chezmoi"
-        "/home/eduardo/Documents"
-        "/home/eduardo/Pictures"
-        "/home/eduardo/Videos"
-        "/home/eduardo/projects"
-        "/home/eduardo/Games"
-        "/home/eduardo/Templates"
-        "/home/eduardo/Music"
-        "/home/eduardo/bin"
-        "/home/eduardo/Sync"
+        "/home/kiri/.local/share/chezmoi"
+        "/home/kiri/Documents"
+        "/home/kiri/Pictures"
+        "/home/kiri/Videos"
+        "/home/kiri/projects"
+        "/home/kiri/Games"
+        "/home/kiri/Templates"
+        "/home/kiri/Music"
+        "/home/kiri/bin"
+        "/home/kiri/Sync"
       ];
       prune.keep = {
         daily = 7;
@@ -29,9 +29,9 @@
         monthly = -1;
       };
       removableDevice = true;
-      repo = "/run/media/eduardo/2e571771-81db-41a5-a0b6-d5c6d3b8bf88/borg";
+      repo = "/run/media/kiri/2e571771-81db-41a5-a0b6-d5c6d3b8bf88/borg";
       startAt = "0/6:30:0";
-      user = "eduardo";
+      user = "kiri";
     };
   };
 }
