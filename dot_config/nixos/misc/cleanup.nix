@@ -2,7 +2,6 @@
 { config, ... }: {
   environment = {
     shellAliases = {
-      startx = "startx $XDG_CONFIG_HOME/x11/xinitrc";
       weechat = "weechat -d $XDG_CONFIG_HOME/weechat";
     };
     variables = {

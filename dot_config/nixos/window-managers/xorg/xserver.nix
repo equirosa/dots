@@ -2,6 +2,9 @@
   imports = [ ./picom.nix ];
   programs = { slock.enable = true; };
   environment = {
+    shellAliases = {
+      startx = "startx $XDG_CONFIG_HOME/x11/xinitrc";
+    };
     sessionVariables = { LOCK_CMD = "slock"; };
     systemPackages = with pkgs; [
       dmenu
