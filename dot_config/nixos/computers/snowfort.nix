@@ -1,12 +1,13 @@
 { config, pkgs, ... }: {
   imports = [
     ../global.nix
-    ../amdgpu.nix
+    ../hardware/amdgpu.nix
+    ../hardware/zsa.nix
   ];
-  networking = { hostName = "snowfort"; };
+  networking.hostName = "snowfort";
   services = {
     btrfs.autoScrub = {
-      # enable = true;
+      enable = true;
       fileSystems = [ "/home" ];
     };
   };
