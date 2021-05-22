@@ -24,7 +24,7 @@
   };
   environment = {
     homeBinInPath = true;
-    defaultPackages = [];
+    defaultPackages = [ ];
   };
   hardware.cpu.amd.updateMicrocode = true;
   nix = {
@@ -127,7 +127,6 @@
         chezmoi
         cryfs
         czkawka
-        freerdp
         gopass # Password Manager
         gopass-jsonapi
         libnotify # Notification stuff
