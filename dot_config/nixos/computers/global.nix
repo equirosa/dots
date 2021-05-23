@@ -15,7 +15,6 @@
     ./theme.nix
     ./tmux.nix
     ./tor.nix
-    ./virtualization.nix
     ./window-managers/wayland/sway.nix
   ];
   boot = {

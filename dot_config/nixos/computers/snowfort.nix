@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   imports = [
-    ../global.nix
+    ./global.nix
     ../hardware/amdgpu.nix
     ../hardware/zsa.nix
   ];
