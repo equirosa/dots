@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }: {
   imports = [
     <home-manager/nixos>
+    ../packages/all.nix
     ./hardware/audio.nix
     ./editors/neovim.nix
     ./flatpak.nix
@@ -8,8 +9,6 @@
     ./location.nix
     ./misc/cleanup.nix
     ./misc/gaming.nix
-    ./packages/unfree.nix
-    ./printing.nix
     ./security.nix
     ./shell.nix
     ./theme.nix
