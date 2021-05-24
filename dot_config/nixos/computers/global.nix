@@ -1,20 +1,20 @@
 { config, lib, pkgs, ... }: {
   imports = [
     <home-manager/nixos>
+    ../editors/neovim.nix
+    ../flatpak.nix
+    ../hardware/audio.nix
+    ../home.nix
+    ../location.nix
+    ../misc/cleanup.nix
+    ../misc/gaming.nix
     ../packages/all.nix
-    ./hardware/audio.nix
-    ./editors/neovim.nix
-    ./flatpak.nix
-    ./home.nix
-    ./location.nix
-    ./misc/cleanup.nix
-    ./misc/gaming.nix
-    ./security.nix
-    ./shell.nix
-    ./theme.nix
-    ./tmux.nix
-    ./tor.nix
-    ./window-managers/wayland/sway.nix
+    ../security.nix
+    ../shell.nix
+    ../theme.nix
+    ../tmux.nix
+    ../tor.nix
+    ../window-managers/wayland/sway.nix
   ];
   boot = {
     kernelPackages = pkgs.linuxPackages_latest_hardened;
