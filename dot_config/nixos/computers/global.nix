@@ -24,7 +24,6 @@
     homeBinInPath = true;
     defaultPackages = [ ];
   };
-  hardware.cpu.amd.updateMicrocode = true;
   nix = {
     package = pkgs.nixUnstable;
     extraOptions = ''
