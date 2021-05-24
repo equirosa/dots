@@ -32,7 +32,7 @@
   };
   users = {
     mutableUsers = false;
-    users.{{ .chezmoi.username }} = {
+    users.kiri = {
       createHome = true;
       description = "Eduardo Quiros";
       extraGroups = [ "wheel" "video" "audio" ];
