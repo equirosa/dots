@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   environment.pathsToLink = [ "/share/zsh" ];
+  users.users.kiri.shell = pkgs.fish;
   #programs.zsh.enable = true;
   programs.fish.enable = true;
   home-manager.users.kiri = {
@@ -156,5 +157,4 @@
       zoxide = { enable = true; };
     };
   };
-  users.users.kiri.shell = pkgs.fish;
 }
