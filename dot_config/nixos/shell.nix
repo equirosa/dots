@@ -106,8 +106,8 @@
             src = pkgs.fetchFromGitHub {
               owner = "oh-my-fish";
               repo = "plugin-bang-bang";
-              rev = "d45ae216969fa5c3eac0b6248119e8a1da56fe89";
-              sha256 = "0jpcs8fpw9a69ai6mwhgikw77j03fhnixcl21yx1b5p65333pddc";
+              rev = "f969c618301163273d0a03d002614d9a81952c1e";
+              sha256 = "1r3d4wgdylnc857j08lbdscqbm9lxbm1wqzbkqz1jf8bgq2rvk03";
             };
           }
           {
@@ -115,8 +115,8 @@
             src = pkgs.fetchFromGitHub {
               owner = "franciscolourenco";
               repo = "done";
-              rev = "1.14.10";
-              sha256 = "1fn4q2clm0n9agb9f2vx1zj3g785kfjyyfdr2w3zzmsjaa8kcxqr";
+              rev = "1.16.2";
+              sha256 = "08f103y0d71gfh6x3h8lwv269vhfkwmc9bahd321r2zwrvkz0xav";
             };
           }
           {
@@ -124,8 +124,8 @@
             src = pkgs.fetchFromGitHub {
               owner = "laughedelic";
               repo = "pisces";
-              rev = "v0.6.0";
-              sha256 = "075nhd90r8cdc8l7viw9cb2cksg82xqz29y3bld2zyx8lcanqlwd";
+              rev = "v0.7.0";
+              sha256 = "073wb83qcn0hfkywjcly64k6pf0d7z5nxxwls5sa80jdwchvd2rs";
             };
           }
         ];
