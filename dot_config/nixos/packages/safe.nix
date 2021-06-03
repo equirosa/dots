@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   users.users.kiri.packages = with pkgs; [
     #### Browsers ####
     amfora

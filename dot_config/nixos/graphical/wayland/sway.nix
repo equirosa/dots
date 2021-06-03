@@ -1,12 +1,4 @@
 { config, pkgs, ... }: {
-  home-manager.users.kiri = { pkgs, ... }: {
-    programs = {
-      mako = {
-        enable = true;
-        defaultTimeout = 5000;
-      };
-    };
-  };
   nixpkgs.config = { wayland = true; };
   programs = {
     sway = {
@@ -16,6 +8,7 @@
         bemenu
         brightnessctl
         foot
+        mako
         gammastep # Control Red Hue
         i3status-rust
         qt5.qtwayland # QT compat

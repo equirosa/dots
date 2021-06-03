@@ -2,33 +2,18 @@
   imports = [
     <home-manager/nixos>
     ../editors/neovim.nix
-    ../flatpak.nix
     ../hardware/audio.nix
     ../home.nix
-    ../location.nix
+    ../shell.nix
+    ../misc/location.nix
     ../misc/cleanup.nix
     ../misc/gaming.nix
     ../packages/all.nix
-    ../security.nix
-    ../shell.nix
     ../theme.nix
-    ../tmux.nix
-    ../tor.nix
-    ../window-managers/wayland/sway.nix
+    ../graphical/wayland/sway.nix
   ];
-  boot = {
-    kernelPackages = pkgs.linuxPackages_latest_hardened;
-    tmpOnTmpfs = true;
-  };
   environment = {
     homeBinInPath = true;
-    defaultPackages = [ ];
-  };
-  nix = {
-    package = pkgs.nixUnstable;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
   };
   users = {
     mutableUsers = false;
@@ -78,12 +63,6 @@
   networking.firewall = {
     allowedTCPPorts = [ 8096 42000 ];
     allowedUDPPorts = [ 8096 42000 ];
-  };
-  services = {
-    i2pd = { enable = true; };
-    ipfs = { enable = true; };
-    udisks2.enable = true;
-    stubby.enable = true;
   };
   system.autoUpgrade = {
     enable = true;

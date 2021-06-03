@@ -4,8 +4,6 @@
     eidolon
     lutris # General games client
     legendary-gl
-    mono
-    wine
   ];
   programs.steam.enable = true;
   hardware = {
