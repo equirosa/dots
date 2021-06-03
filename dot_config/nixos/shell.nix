@@ -4,7 +4,6 @@
   programs.fish.enable = true;
   home-manager.users.kiri = {
     programs = {
-      bash.enable = true;
       zsh = {
         enableAutosuggestions = true;
         enableCompletion = true;
