@@ -23,6 +23,10 @@ exec swayidle -w \
 	before-sleep '$lock'
 
 #### Input configuration ####
+input * {
+	xkb_layout "us,latam"
+	xkb_options "grp:win_space_toggle"
+}
 
 #### Key bindings ####
 
