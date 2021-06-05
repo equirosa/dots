@@ -1,11 +1,11 @@
 autoclip: true
 autoimport: true
 cliptimeout: 45
-exportkeys: false
+exportkeys: true
 nocolor: false
 nopager: false
 notifications: true
 parsing: true
 path: /home/kiri/.local/share/password-store
-safecontent: false
+safecontent: true
 mounts: {}
