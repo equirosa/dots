@@ -4,6 +4,7 @@
     eidolon
     lutris # General games client
     legendary-gl
+    taisei
   ];
   programs.steam.enable = true;
   hardware = {
