@@ -11,7 +11,7 @@
     #### Comms ####
     aerc # Mail reader
     dino # XMPP client
-    discord
+    ferdi
     mumble # Cool voice chat
     toot # Mastodon client
     tut # Mastodon client
