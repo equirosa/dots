@@ -13,6 +13,7 @@
     dino # XMPP client
     ferdi
     mumble # Cool voice chat
+    signal-desktop
     toot # Mastodon client
     tut # Mastodon client
     weechat # IRC + other protocols
@@ -87,6 +88,7 @@
     gopass # Password Manager
     gopass-jsonapi
     keepassxc
+    kopia
     libnotify # Notification stuff
     rofi
     speedtest-cli
