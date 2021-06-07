@@ -86,6 +86,7 @@
     czkawka
     gopass # Password Manager
     gopass-jsonapi
+    keepassxc
     libnotify # Notification stuff
     rofi
     speedtest-cli
