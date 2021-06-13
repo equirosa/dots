@@ -90,6 +90,7 @@
     keepassxc
     kopia
     libnotify # Notification stuff
+    remmina
     rofi
     speedtest-cli
     tealdeer
