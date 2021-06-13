@@ -95,13 +95,6 @@
         mpd = {
           enable = true;
           musicDirectory = "/home/kiri/Music";
-          extraConfig = ''
-            audio_output {
-            type "pulse"
-            name "Pulseaudio"
-            server "127.0.0.1"
-            }
-          '';
         };
         mpdris2 = {
           enable = true;
