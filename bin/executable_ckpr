@@ -1,9 +1,0 @@
-#!/bin/sh
-
-remote="$(git remote get-url origin)"
-branchname="pr-$1"
-
-case "$remote" in
-	*github*) git fetch upstream "pull/$1/head:$branchname" \
-		&& git checkout "$branchname" ;;
-esac

@@ -3,4 +3,8 @@
 case "$1" in
 	*.tar.*z*) tar -xvf "$1" ;;
 	*.zip | *.7z) 7z x "$1" ;;
+	*)
+		printf "Unhandled"
+		exit 1
+		;;
 esac

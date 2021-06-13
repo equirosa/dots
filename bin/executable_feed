@@ -2,6 +2,10 @@
 case "$1" in
 	o | odysee) url="https://lbryfeed.melroy.org/channel/odysee/$2/json" ;;
 	t | twitch) url="https://twitchrss.appspot.com/vod/$2" ;;
+	*)
+		printf "Unhandled"
+		exit 1
+		;;
 esac
 
-2clip "$url"
+2clip "${url}"

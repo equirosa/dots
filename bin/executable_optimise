@@ -5,7 +5,7 @@
 
 [ -x "$(command -v jpegoptim)" ] \
 	&& for ext in jpg jpeg; do
-		find . -name "*.$ext" -exec jpegoptim --strip-all {} \;
+		find . -name "*.${ext}" -exec jpegoptim --strip-all {} \;
 	done
 
 [ -x "$(command -v mkclean)" ] \

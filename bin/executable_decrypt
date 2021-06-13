@@ -1,8 +1,10 @@
 #!/bin/sh
 
+encrypted_file="$(realpath "$1")"
+decrypted_name="${encrypted_file%.*}"
+
 gpgdecrypt() {
-	out="$(echo "$1" | sed 's/.gpg//g')"
-	gpg --output "$out" --decrypt "$1"
+	gpg --output "${decrypted_name}" --decrypt "$1"
 }
 
 case "$1" in
@@ -10,7 +12,7 @@ case "$1" in
 	*) echo "I can't decrypt that..." ;;
 esac
 
-if [ -f "$out" ]; then
+if [ -f "${decrypted_name}" ]; then
 	notify-send -t 5000 "✅ file decrypted"
 else
 	notify-send -t 5000 "❌ decryption failed"

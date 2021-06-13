@@ -1,9 +1,9 @@
 #!/bin/sh
 layout="$(swaymsg -t get_inputs \
 	| jq -r '.[] | select(.identifier == "1133:16494:Logitech_K800") | .xkb_active_layout_name' | tail -n 1)"
-case "$layout" in
+case "${layout}" in
 	*Spanish*) out='🇨' ;;
 	*) out='🇺🇸' ;;
 esac
 
-echo "$out"
+echo "${out}"

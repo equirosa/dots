@@ -7,17 +7,17 @@ set -euo
 # Original version at: https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenuunicode
 # License: GNU GPLv3, license text at https://www.gnu.org/licenses/gpl-3.0.txt
 
-if [ -z "$WAYLAND_DISPLAY" ]; then
+if [ -z "${WAYLAND_DISPLAY}" ]; then
 	clipboard="xclip"
 else
 	clipboard="wl-copy"
 fi
 
-chosen=$(cut -d ';' -f1 "$XDG_DATA_HOME/emoji" | menu | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 "${XDG_DATA_HOME}/emoji" | menu | sed "s/ .*//")
 
 # Exit if none chosen.
-[ -z "$chosen" ] && exit
+[ -z "${chosen}" ] && exit
 
-echo "$chosen" | tr -d '\n' | $clipboard
+echo "${chosen}" | tr -d '\n' | ${clipboard}
 
-notify-send "'$chosen' copied to clipboard." &
+notify-send "'${chosen}' copied to clipboard." &

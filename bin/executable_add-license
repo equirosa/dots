@@ -2,6 +2,6 @@
 
 chosen="$(licensor -l | menu)"
 
-[ -z "$chosen" ] && exit 1
+[ -z "${chosen}" ] && exit 1
 
-licensor "$chosen" > LICENSE
+licensor "${chosen}" > LICENSE

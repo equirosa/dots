@@ -1,7 +1,0 @@
-#!/bin/sh
-
-xfreerdp --dynamic-resolution -u "Eduardo Quiros" \
-	-p "$(gopass show misc/gaplap)" \
-	-v "192.168.0.4" \
-	--microphone "sys:pulse,format:1,quality:high" \
-	--sound "sys:pulse,format:1,quality:high"

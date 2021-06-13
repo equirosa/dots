@@ -9,11 +9,11 @@ case "$1" in
 		;;
 	http*)
 		case "$1" in
-			*.jpg | *.png) curl -L "$1" -o "/tmp/image" && $IMG "/tmp/image" && exit 0 ;;
-			*) $XDGOPEN "$1" ;;
+			*.jpg | *.png) curl -L "$1" -o "/tmp/image" && ${IMG} "/tmp/image" ;;
+			*) ${XDGOPEN} "$1" ;;
 		esac
 		;;
-	*.jpeg | *.jpg | *.png) "$IMG" "$1" && exit 0 ;;
+	*.jpeg | *.jpg | *.png) "${IMG}" "$1" ;;
 	mailto*) aerc "$1" ;;
-	*) $XDGOPEN "$1" ;;
+	*) ${XDGOPEN} "$1" ;;
 esac

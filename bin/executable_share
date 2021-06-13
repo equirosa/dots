@@ -2,4 +2,4 @@
 set -euo
 
 export SDL_VIDEODRIVER=x11
-wf-recorder -c rawvideo -m sdl -f pipe:xwayland-mirror -g "$(gway)"
+wf-recorder -c rawvideo -m sdl -f pipe:xwayland-mirror -g "$(sway-geometry)"

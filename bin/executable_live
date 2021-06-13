@@ -2,21 +2,25 @@
 # Author: Eduardo Quiros <eduardo@eduardoquiros.com>
 # Description: Small script to get a streamer URL and display it in MPV.
 
-streamers_file="$XDG_DATA_HOME/streamers"
+streamers_file="${XDG_DATA_HOME}/streamers"
 
 subbed() {
 	# Get user selection via dmenu-wl from streamers file.
-	chosen=$(menu < "$streamers_file" | cut -d '_' -f2)
+	chosen=$(menu < "${streamers_file}" | cut -d '_' -f2)
 
 	# This switch simply matches some shorthand to the known url of the streamer, if it isn't in the list, then it simply passes the parameter directly to the command at the bottom.
 
-	[ -z "$chosen" ] && exit
+	[ -z "${chosen}" ] && exit
 
-	exec mpv "$chosen"
+	exec mpv "${chosen}"
 }
 
 case "$1" in
 	"") subbed ;;
-	"twitch" | "t") echo "https://twitch.tv/$2" >> "$streamers_file" ;;
-	"l") cat "$streamers_file" ;;
+	"twitch" | "t") echo "https://twitch.tv/$2" >> "${streamers_file}" ;;
+	"l") cat "${streamers_file}" ;;
+	*)
+		printf "Unhandled"
+		exit 1
+		;;
 esac

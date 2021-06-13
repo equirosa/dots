@@ -7,20 +7,23 @@ extension="${file##*.}"
 
 latex_cleanup() {
 	for ext in aux out log; do
-		rm "$basename.$ext"
+		rm "${basename}.${ext}"
 	done
 }
 
-case "$extension" in
-	c) cc "$file" -o "$basename" ;;
-	cpp) c++ "$file" -o "$basename" ;;
-	md) pandoc -t ms --highlight-style kate -s -o "$basename".pdf "$file" ;;
-#	md) lowdown -X title $< -sTms "$file" \
-		#| pdfroff -itk -mspdf  >"$basename.pdf" ;;
-	ms) groff -k -ms "$file" >> "$basename.pdf" ;;
-	org) pandoc "$file" -o "$basename.pdf" ;;
+case "${extension}" in
+	c) cc "${file}" -o "${basename}" ;;
+	cpp) c++ "${file}" -o "${basename}" ;;
+	md) pandoc -t ms --highlight-style kate -s -o "${basename}".pdf "${file}" ;;
+#	md) lowdown -X title $< -sTms "${file}" | pdfroff -itk -mspdf  >"${basename}.pdf" ;;
+	ms) groff -k -ms "${file}" >> "${basename}.pdf" ;;
+	org) pandoc "${file}" -o "${basename}.pdf" ;;
 	tex)
 		xelatex "$1"
 		latex_cleanup "$@"
+		;;
+	*)
+		echo "No idea how to handle that..."
+		exit 1
 		;;
 esac
