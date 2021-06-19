@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
     use {'kyazdani42/nvim-web-devicons', opt = false}
     use 'kyazdani42/nvim-tree.lua'
 
+    use 'chiefnoah/neuron-v2.vim'
+
     -- Development
     use {
         'tpope/vim-dispatch', 'machakann/vim-sandwich', 'tpope/vim-unimpaired',
