@@ -9,7 +9,7 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = [ "Fira Code Nerd Font" ];
+        monospace = [ "Fira Code Nerd Font" "Twitter Color Emoji" ];
         emoji = [ "Twitter Color Emoji" ];
       };
     };
