@@ -10,6 +10,7 @@
     ../misc/gaming.nix
     ../packages/all.nix
     ../theme.nix
+    ../tmux.nix
     ../tor.nix
     ../graphical/wayland/sway.nix
   ];
