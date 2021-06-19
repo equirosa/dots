@@ -1,17 +1,17 @@
 #!/bin/sh
 borg create --progress \
-	/run/media/eduardo/2e571771-81db-41a5-a0b6-d5c6d3b8bf88/borg/::\{hostname\}-\{user\}-\{now\}\
-	~/Games/\
+	/run/media/"$(whoami)"/2e571771-81db-41a5-a0b6-d5c6d3b8bf88/borg/::\{hostname\}-\{user\}-\{now\}\
 	~/Documents/\
-	~/Pictures/\
-	~/Videos/\
-	~/Music/\
-	~/Templates/\
 	~/Downloads/\
-	~/projects\
+	~/Games/itch/\
+	~/Music/\
+	~/Pictures/\
+	~/Templates/\
+	~/Videos/\
 	~/bin/\
+	~/projects\
 	--exclude "*/league-of-legends/*"\
 	--exclude '*/.stfolder'\
 	--exclude "*/oses/*"\
 	--exclude "*/node_modules/*"\
-	--compression auto,zstd,10
+	--compression auto,zstd
