@@ -7,5 +7,5 @@ nopager: false
 notifications: true
 parsing: true
 path: /home/kiri/.local/share/password-store
-safecontent: true
+safecontent: false
 mounts: {}
