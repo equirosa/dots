@@ -29,7 +29,6 @@
     dragon-drop # Drag and drop so I don't use another FM to drag and drop.
     ffmpegthumbnailer
     ffmpeg-full
-    highlight # Prettify the rest
     lf # Terminal file manager
     poppler_utils
     trash-cli # Trash files

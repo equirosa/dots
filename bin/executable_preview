@@ -13,5 +13,5 @@ case "$1" in
 	*.mkv | *.mp4 | *.webm) show_tumbnail "$@" ;;
 	*.rar | *.7z | *.zip | *.tar.*) arc ls "$1" | rev | cut -f1 | rev ;;
 	*.docx | *.odt) pandoc "$1" --to plain ;;
-	*) highlight "$1" -O ansi --force ;;
+	*) bat --plain --paging=never --color=always "$1" ;;
 esac
