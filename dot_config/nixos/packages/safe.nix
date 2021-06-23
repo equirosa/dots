@@ -89,6 +89,7 @@
     keepassxc
     kopia
     libnotify # Notification stuff
+    neuron-notes
     remmina
     speedtest-cli
     tealdeer
