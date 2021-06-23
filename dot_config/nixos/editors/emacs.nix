@@ -29,7 +29,6 @@
             flycheck-plantuml
             move-dup
             pdf-tools
-            trashed
             # Org
             babel
             org-superstar
