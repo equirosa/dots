@@ -220,6 +220,7 @@ bindsym $mod+Shift+v gaps inner current minus 5
 for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [title="Firefox — Sharing Indicator"] no_focus
 for_window [title="Firefox — Sharing Indicator"] inhibit_idle open
+for_window [title="Firefox — Sharing Indicator"] sticky enable
 
 # Autostart
 exec {
