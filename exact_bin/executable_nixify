@@ -12,4 +12,9 @@ mkShell {
 }
 EOF
 
+case "$1" in
+	"node") echo "export \$PATH=\$XDG_DATA_DIR/npm/bin:\$PATH" >> ./.envrc;;
+	*) echo "Using default envrc";;
+esac
+
 ${EDITOR} default.nix

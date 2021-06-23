@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case "$1" in
-	*.nix) nixpkgs-fmt "$1" ;;
-	*.sh) shfmt -s -p -bn -w -sr -ci "$1" ;;
-	*.py) black "$1" ;;
-	*) printf "No formatter found" ;;
-esac

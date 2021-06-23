@@ -1,0 +1,17 @@
+#!/bin/sh
+
+format_shell() {
+	shfmt -s -p -bn -w -sr -ci "$1"
+}
+
+case "$1" in
+	*.nix) nixpkgs-fmt "$1" ;;
+	*.sh) format_shell "$@" ;;
+	*.py) black "$1" ;;
+	*) printf "Extension unrecognized" ;;
+esac
+
+case "$(head -n 1 "$1")" in
+	*\#!/bin/sh*) format_shell "$@" ;;
+	*) printf "No formatter found" ;;
+esac

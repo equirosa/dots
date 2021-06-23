@@ -1,0 +1,8 @@
+#!/bin/sh
+case "$1" in
+	http*) setsid youtube-dl --restrict-filenames\
+		-o "${HOME}/Videos/watchlist/$(date +%s)-%(title)s.%(ext)s"\
+		"$1" ;;
+	"") setsid mpv "${HOME}/Videos/watchlist/" ;;
+	*) setsid mv "$1" "${HOME}/Videos/watchlist/$(date +%s)-$1" ;;
+esac
