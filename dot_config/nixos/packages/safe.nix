@@ -11,7 +11,6 @@
     #### Comms ####
     aerc # Mail reader
     dino # XMPP client
-    ferdi
     mumble # Cool voice chat
     signal-desktop
     toot # Mastodon client
@@ -30,6 +29,7 @@
     ffmpegthumbnailer
     ffmpeg-full
     lf # Terminal file manager
+    pistol #Previewer
     poppler_utils
     trash-cli # Trash files
     zathura # PDF Reader
