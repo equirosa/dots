@@ -1,4 +1,5 @@
 #!/bin/sh
 
-7z a -l "$1.zip" "$1"
+[ -z "$1" ] && exit 1
+arc archive "$1.zip" "$1"
 notify-send "zipped!"
