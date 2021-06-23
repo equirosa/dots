@@ -40,6 +40,9 @@
           chc = "chezmoi cd";
           chd = "chezmoi diff";
           che = "chezmoi edit --apply";
+          chf = "chezmoi forget";
+          chm = "chezmoi managed";
+          chu = "chezmoi unmanaged";
           cat = "bat -p";
           dg = "dragon -a -x";
           yd = "youtube-dl";
