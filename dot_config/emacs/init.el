@@ -18,7 +18,6 @@
 (global-set-key (kbd "M-k") 'move-dup-move-lines-up)
 
 ;; Integrations
-(direnv-mode)
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (add-hook 'yaml-mode-hook #'whitespace-mode)
@@ -91,6 +90,9 @@
 (setq plantuml-executable-path (executable-find "plantuml"))
 (setq plantuml-default-exec-mode 'executable)
 (setq plantuml-output-type "txt")
+
+;; Direnv
+(envrc-global-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

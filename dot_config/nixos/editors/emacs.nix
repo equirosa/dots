@@ -20,7 +20,7 @@
             ## Development
             company
             ## Nix Stuff
-            direnv
+            envrc
             nix-mode
             # Misc.
             deadgrep
