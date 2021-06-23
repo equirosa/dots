@@ -61,8 +61,10 @@ config.bind(
     "config-cycle statusbar.show always never;; config-cycle tabs.show always never",
 )
 # Gopass stuff
-config.bind("zl", "spawn --userscript qute-pass --mode gopass")
-config.bind("zol", "spawn --userscript qute-pass --mode gopass --otp-only")
+config.bind('<z><l>', 'spawn --userscript qute-pass --dmenu-invocation menu --mode gopass')
+config.bind('<z><u><l>', 'spawn --userscript qute-pass --username-only --dmenu-invocation menu --mode gopass')
+config.bind('<z><p><l>', 'spawn --userscript qute-pass --password-only --dmenu-invocation menu --mode gopass')
+config.bind('<z><o><l>', 'spawn --userscript qute-pass --otp-only --dmenu-invocation menu --mode gopass')
 
 # Security/Privacy
 c.content.cookies.accept = "no-3rdparty"
