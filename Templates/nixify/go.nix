@@ -1,7 +1,7 @@
+with import <nixpkgs> { };
 mkShell {
   nativeBuildInputs = [
     bashInteractive
     go
   ];
 }
-with import <nixpkgs> { };
