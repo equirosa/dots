@@ -2,6 +2,7 @@
   imports = [
     <home-manager/nixos>
     ../editors/neovim.nix
+    ../editors/emacs.nix
     ../hardware/audio.nix
     ../home.nix
     ../shell.nix
