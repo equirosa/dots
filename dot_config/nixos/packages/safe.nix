@@ -29,6 +29,7 @@
     ffmpegthumbnailer
     ffmpeg-full
     lf # Terminal file manager
+    xplr
     pistol #Previewer
     poppler_utils
     trash-cli # Trash files
