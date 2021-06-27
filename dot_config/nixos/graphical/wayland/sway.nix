@@ -24,7 +24,7 @@
         sway-contrib.grimshot # screenshot utility
       ];
       extraSessionCommands = ''
-        export TERMINAL=foot
+        export TERMINAL=footclient
         export XDG_SESSION_TYPE=wayland
         export XDG_CURRENT_DESKTOP=sway
         export SDL_VIDEODRIVER=wayland

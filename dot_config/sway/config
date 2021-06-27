@@ -226,6 +226,7 @@ for_window [title="Firefox — Sharing Indicator"] sticky enable
 exec {
 	autotiling
 	emacs --daemon
+	foot --server
 	gammastep -l geoclue2
 	mako
 	pipewire
