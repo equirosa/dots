@@ -3,6 +3,7 @@
     <home-manager/nixos>
     ../editors/neovim.nix
     ../editors/emacs.nix
+    ../env_vars.nix
     ../hardware/audio.nix
     ../home.nix
     ../shell.nix
