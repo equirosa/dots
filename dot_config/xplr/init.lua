@@ -1,7 +1,7 @@
 -- You need to define the script version for compatibility check.
 -- See https://github.com/sayanarijit/xplr/wiki/Upgrade-Guide.
 --
--- version = "1.0.0"
+version = "0.14.2"
 -- Config
 ---- General
 ------ Show hidden
