@@ -2,7 +2,7 @@
 set icons on
 set period 1
 set drawbox on
-set previewer ~/bin/preview
+set previewer pistol
 set info size:time
 set shellopts '-eu'
 #set ifs "\n"
