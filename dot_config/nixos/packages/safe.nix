@@ -57,6 +57,7 @@
     shfmt
 
     # LSPs
+    efm-langserver
     rnix-lsp
     sumneko-lua-language-server
 
