@@ -10,7 +10,7 @@ require('telescope').setup({
         selection_strategy = "reset",
         layout_strategy = "flex",
         borderchars = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
-        layout_defaults = {
+        layout_config = {
             horizontal = {
                 width_padding = 0.1,
                 height_padding = 0.1,
@@ -86,21 +86,16 @@ pcall(require("telescope").load_extension, "frecency") -- frecency
 local W = {slender = 0.3, narrow = 0.5, wide = 0.8}
 
 local no_preview = function(width)
-    return require("telescope.themes").get_dropdown(
-               {
-            borderchars = {
-                {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
-                prompt = {"─", "│", " ", "│", "┌", "┐", "│", "│"},
-                results = {
-                    "─", "│", "─", "│", "├", "┤", "┘", "└"
-                },
-                preview = {
-                    "─", "│", "─", "│", "┌", "┐", "┘", "└"
-                }
-            },
-            width = width or W.wide,
-            previewer = false
-        })
+    return require("telescope.themes").get_dropdown({
+        borderchars = {
+            {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+            prompt = {"─", "│", " ", "│", "┌", "┐", "│", "│"},
+            results = {"─", "│", "─", "│", "├", "┤", "┘", "└"},
+            preview = {"─", "│", "─", "│", "┌", "┐", "┘", "└"}
+        },
+        width = width or W.wide,
+        previewer = false
+    })
 end
 
 local M = {
@@ -119,8 +114,9 @@ local M = {
     commands = function() require("telescope.builtin").commands(no_preview()) end,
 
     find_files = function()
-        require("telescope.builtin").find_files(
-            {file_ignore_patterns = {"%.png", "%.jpg", "%.webp"}})
+        require("telescope.builtin").find_files({
+            file_ignore_patterns = {"%.png", "%.jpg", "%.webp"}
+        })
     end,
 
     frecency = function() require("telescope").extensions.frecency.frecency() end,
@@ -148,8 +144,10 @@ local M = {
     end,
 
     live_grep = function()
-        require("telescope.builtin").grep_string(
-            {shorten_path = true, search = vim.fn.input("Grep String > ")})
+        require("telescope.builtin").grep_string({
+            shorten_path = true,
+            search = vim.fn.input("Grep String > ")
+        })
     end,
 
     lsp_code_actions = function()
