@@ -35,6 +35,7 @@
           c = "cd";
           cf = "cryfs";
           cfu = "cryfs-unmount";
+          ch = "chezmoi";
           cha = "chezmoi add";
           chap = "chezmoi apply";
           chc = "chezmoi cd";
