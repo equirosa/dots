@@ -8,7 +8,7 @@
     MONITOR = "btm";
     BROWSER = "${pkgs.firefox}/bin/firefox";
     GEMBROWSER = "${pkgs.amfora}/bin/amfora";
-    TERMBROWSER = "w3m";
+    TERMBROWSER = "${pkgs.w3m}/bin/w3m";
     EDITOR = "nvim";
     FILE = "${pkgs.lf}/bin/lf";
     IMG = "${pkgs.imv}/bin/imv";
@@ -17,6 +17,7 @@
     READER = "${pkgs.zathura}/bin/zathura";
     LF_ICONS =
       "di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.cpp=ﭱ:*.js=:*.vimrc=:*.vim=:*.nix=:*.css=:*.pdf=:*.html=:*.rs=:*.rlib=:*.7z=:*.zip=:*.xz=:*.*z*=:*.tar=:*.lz=:*.zst=:*.zstd=:*.git=:*.webm=:*.mp4=:*.flac=:*.ogg=:*.opus=:*.m4a=:*.deb=:*.rpm=:*.py=:*.md=:*.json=ﬥ :*.mkv=:*.go=:.git=:*.ts=ﯤ:*.xml=謹:*.drawio=謹";
+    PREVIEWER = "${pkgs.pistol}/bin/pistol";
 
     # Java
     _JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=lcd";
