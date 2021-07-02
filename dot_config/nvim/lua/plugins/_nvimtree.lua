@@ -37,37 +37,29 @@ local settings = {
 
 apply_globals(settings)
 
-local get_lua_cb = function(cb_name)
-    return string.format(":lua require'nvim-tree'.on_keypress('%s')<CR>",
-                         cb_name)
-end
-
 -- Mappings for nvimtree
+local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 vim.g.nvim_tree_bindings = {
-    ["-"] = get_lua_cb("preview"),
-    ["<BS>"] = get_lua_cb("close_node"),
-    ["<C-]>"] = get_lua_cb("cd"),
-    ["<C-r>"] = get_lua_cb("full_rename"),
-    ["<C-t>"] = get_lua_cb("tabnew"),
-    ["<C-v>"] = get_lua_cb("vsplit"),
-    ["<C-x>"] = get_lua_cb("split"),
-    ["<CR>"] = get_lua_cb("edit"),
-    ["<S-CR>"] = get_lua_cb("close_node"),
-    ["<S-Tab>"] = get_lua_cb("dir_up"),
-    ["<Tab>"] = get_lua_cb("cd"),
-    ["H"] = get_lua_cb("toggle_dotfiles"),
-    ["I"] = get_lua_cb("toggle_ignored"),
-    ["R"] = get_lua_cb("refresh"),
-    ["[c"] = get_lua_cb("prev_git_item"),
-    ["]c"] = get_lua_cb("next_git_item"),
-    ["a"] = get_lua_cb("create"),
-    ["c"] = get_lua_cb("copy"),
-    ["d"] = get_lua_cb("remove"),
-    ["o"] = get_lua_cb("edit"),
-    ["p"] = get_lua_cb("paste"),
-    ["q"] = get_lua_cb("close"),
-    ["r"] = get_lua_cb("rename"),
-    ["x"] = get_lua_cb("cut")
+    {key = "-", cb = tree_cb("preview")},
+    {key = "<BS>", cb = tree_cb("close_node")},
+    {key = "<C-]>", cb = tree_cb("cd")},
+    {key = "<C-r>", cb = tree_cb("full_rename")},
+    {key = "<C-t>", cb = tree_cb("tabnew")},
+    {key = "<C-v>", cb = tree_cb("vsplit")},
+    {key = "<C-x>", cb = tree_cb("split")},
+    {key = "<CR>", cb = tree_cb("edit")},
+    {key = "<S-CR>", cb = tree_cb("close_node")},
+    {key = "<S-Tab>", cb = tree_cb("dir_up")},
+    {key = "<Tab>", cb = tree_cb("cd")},
+    {key = "H", cb = tree_cb("toggle_dotfiles")},
+    {key = "I", cb = tree_cb("toggle_ignored")},
+    {key = "R", cb = tree_cb("refresh")},
+    {key = "[c", cb = tree_cb("prev_git_item")},
+    {key = "]c", cb = tree_cb("next_git_item")},
+    {key = "a", cb = tree_cb("create")}, {key = "c", cb = tree_cb("copy")},
+    {key = "d", cb = tree_cb("remove")}, {key = "o", cb = tree_cb("edit")},
+    {key = "p", cb = tree_cb("paste")}, {key = "q", cb = tree_cb("close")},
+    {key = "r", cb = tree_cb("rename")}, {key = "x", cb = tree_cb("cut")}
 }
 
 -- default will show icon by default if no icon is provided
