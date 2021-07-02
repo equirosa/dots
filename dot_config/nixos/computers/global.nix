@@ -4,7 +4,7 @@
     ../editors/neovim.nix
     ../editors/emacs.nix
     ../env_vars.nix
-    ../hardware/audio.nix
+    ../hardware/audio/default.nix
     ../home.nix
     ../shell.nix
     ../misc/location.nix
