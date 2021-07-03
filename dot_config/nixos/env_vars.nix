@@ -14,6 +14,7 @@
     IMG = "${pkgs.imv}/bin/imv";
     MAIL = "${pkgs.torsocks}/bin/torsocks ${pkgs.aerc}/bin/aerc";
     MUSIC = "${pkgs.ncmpcpp}/bin/ncmpcpp";
+    PAGER = "${pkgs.bat}/bin/bat --plain";
     READER = "${pkgs.zathura}/bin/zathura";
     LF_ICONS =
       "di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.cpp=ﭱ:*.js=:*.vimrc=:*.vim=:*.nix=:*.css=:*.pdf=:*.html=:*.rs=:*.rlib=:*.7z=:*.zip=:*.xz=:*.*z*=:*.tar=:*.lz=:*.zst=:*.zstd=:*.git=:*.webm=:*.mp4=:*.flac=:*.ogg=:*.opus=:*.m4a=:*.deb=:*.rpm=:*.py=:*.md=:*.json=ﬥ :*.mkv=:*.go=:.git=:*.ts=ﯤ:*.xml=謹:*.drawio=謹";
