@@ -61,10 +61,18 @@ config.bind(
     "config-cycle statusbar.show always never;; config-cycle tabs.show always never",
 )
 # Gopass stuff
-config.bind('<z><l>', 'spawn --userscript qute-pass --dmenu-invocation menu --mode gopass')
-config.bind('<z><u><l>', 'spawn --userscript qute-pass --username-only --dmenu-invocation menu --mode gopass')
-config.bind('<z><p><l>', 'spawn --userscript qute-pass --password-only --dmenu-invocation menu --mode gopass')
-config.bind('<z><o><l>', 'spawn --userscript qute-pass --otp-only --dmenu-invocation menu --mode gopass')
+config.bind(
+    '<z><l>',
+    'spawn --userscript qute-pass --dmenu-invocation menu --mode gopass')
+config.bind(
+    '<z><u><l>',
+    'spawn --userscript qute-pass --username-only --dmenu-invocation menu --mode gopass')
+config.bind(
+    '<z><p><l>',
+    'spawn --userscript qute-pass --password-only --dmenu-invocation menu --mode gopass')
+config.bind(
+    '<z><o><l>',
+    'spawn --userscript qute-pass --otp-only --dmenu-invocation menu --mode gopass')
 
 # Security/Privacy
 c.content.cookies.accept = "no-3rdparty"
@@ -84,7 +92,9 @@ if os.environ["TERMINAL"] != "foot":
 if os.environ["TERMINAL"] == "foot":
     c.editor.command = [os.environ["TERMINAL"], os.environ["EDITOR"], "{file}"]
 
-c.url.start_pages = ["https://reader.miniflux.app", "https://wallabag.nixnet.xyz"]
+c.url.start_pages = [
+    "https://reader.miniflux.app",
+    "https://wallabag.nixnet.xyz"]
 c.url.open_base_url = True  # Opens search engine when no search param is given
 c.url.searchengines = {
     "DEFAULT": "https://searx.neocities.org/?q={}",
