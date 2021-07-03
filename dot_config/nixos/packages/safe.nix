@@ -39,7 +39,7 @@
     cinnamon.warpinator
     croc # Sync file transfer
     ffsend # Async file transfer
-    onionshare # Tor file transfer
+    # onionshare # Tor file transfer
     syncthing
     transmission # Torrent client
     tremc # Transmission frontend TUI
