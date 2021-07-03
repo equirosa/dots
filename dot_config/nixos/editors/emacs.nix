@@ -19,6 +19,8 @@
           with epkgs; [
             ## Development
             company
+            tree-sitter
+            tree-sitter-langs
             ## Nix Stuff
             envrc
             nix-mode
