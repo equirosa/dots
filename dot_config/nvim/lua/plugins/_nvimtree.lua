@@ -47,7 +47,7 @@ vim.g.nvim_tree_bindings = {
     {key = "<C-t>", cb = tree_cb("tabnew")},
     {key = "<C-v>", cb = tree_cb("vsplit")},
     {key = "<C-x>", cb = tree_cb("split")},
-    {key = "<CR>", cb = tree_cb("edit")},
+    {key = {"<CR>", "l"}, cb = tree_cb("edit")},
     {key = "<S-CR>", cb = tree_cb("close_node")},
     {key = "<S-Tab>", cb = tree_cb("dir_up")},
     {key = "<Tab>", cb = tree_cb("cd")},
