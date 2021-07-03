@@ -39,6 +39,7 @@
             org-roam
             org-roam-server
             plantuml-mode
+            neuron-mode
             # Utilities
             undo-tree
             # Style
