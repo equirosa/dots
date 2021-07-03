@@ -6,16 +6,23 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.algorithm:
+    global: brightness-rgb
   colors.webpage.darkmode.enabled:
-    global: true
+    global: false
+  colors.webpage.darkmode.policy.images:
+    global: never
   content.javascript.enabled:
     '*://discord.com/*': true
+    '*://github.com/*': true
     '*://share.tube/*': true
     '*://ucenfotec.zoom.us/*': true
     '*://wallabag.nixnet.services/*': true
   content.media.audio_capture:
     https://discord.com: true
     https://ucenfotec.zoom.us: true
+  content.prefers_reduced_motion:
+    global: true
   content.private_browsing:
     global: false
   statusbar.show:
