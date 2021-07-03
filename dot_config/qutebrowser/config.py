@@ -88,9 +88,11 @@ theme.spill.paint(c, {"spacing": {"vertical": 0, "horizontal": 0}})
 c.content.fullscreen.window = True  # Limits 'fullscreen' to window dimensions
 c.content.autoplay = False  # Disables autplay of videos
 if os.environ["TERMINAL"] != "foot":
-    c.editor.command = [os.environ["TERMINAL"], "-e", os.environ["EDITOR"], "{file}"]
-if os.environ["TERMINAL"] == "foot":
-    c.editor.command = [os.environ["TERMINAL"], os.environ["EDITOR"], "{file}"]
+    c.editor.command = [os.environ["TERMINAL"], "-e", "chezmoi", "edit",
+                        "--apply", "{file}"]
+if os.environ["TERMINAL"] in ["foot", "footclient"]:
+    c.editor.command = [os.environ["TERMINAL"], "chezmoi", "edit",
+                        "--apply", "{file}"]
 
 c.url.start_pages = [
     "https://reader.miniflux.app",
