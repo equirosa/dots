@@ -50,6 +50,15 @@ require('formatter').setup({
                 }
             end
         },
+        nix = {
+            function()
+                return {
+                    exe = "nixpkgs-fmt",
+                    args = {vim.api.nvim_buf_get_name(0)},
+                    stdin = true
+                }
+            end
+        },
         sass = {prettier},
         scss = {prettier},
         typescript = {prettier},
