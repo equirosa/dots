@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ -e "$(pgrep transmission-da)" ]; then
+if [ -n "$(pgrep transmission-da)" ]; then
 	pkill transmission-da && notify-send -t 5000 "❌ killing transmission daemon"
 else
 	transmission-daemon && notify-send -t 5000 "🟢 starting transmission daemon"
