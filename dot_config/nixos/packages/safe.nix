@@ -68,7 +68,7 @@
 
     # Media Playback
     mpv
-    pypy # Necessary for umpv script to work
+    python3Minimal
     youtube-dl # Video downloading utility
 
     #### Document ####
