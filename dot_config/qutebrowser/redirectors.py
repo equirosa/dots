@@ -1,5 +1,7 @@
 import random
-import operator, re, typing
+import operator
+import re
+import typing
 from urllib.parse import urljoin
 
 from qutebrowser.api import interceptor, message
