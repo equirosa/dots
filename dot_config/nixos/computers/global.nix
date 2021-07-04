@@ -64,10 +64,6 @@
       pinentryFlavor = "qt";
     };
   };
-  networking.firewall = {
-    allowedTCPPorts = [ 8096 42000 ];
-    allowedUDPPorts = [ 8096 42000 ];
-  };
   system.autoUpgrade = {
     enable = true;
     dates = "5:0:0";
