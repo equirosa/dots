@@ -1,5 +1,6 @@
 { config, ... }: {
   home-manager = {
+    useUserPackages = true;
     useGlobalPkgs = true;
     users.kiri = { pkgs, ... }: {
       programs = {
