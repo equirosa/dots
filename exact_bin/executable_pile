@@ -7,7 +7,7 @@ extension="${file##*.}"
 
 latex_cleanup() {
 	for ext in aux out log; do
-		rm "${basename}.${ext}"
+		[ -f "${basename}.${ext}" ] && rm "${basename}.${ext}"
 	done
 }
 
