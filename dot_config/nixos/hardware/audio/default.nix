@@ -1,7 +1,7 @@
 {config, pkgs, ...}:
 {
   imports = [
-    ./pulseaudio.nix
+    ./pipewire.nix
   ];
   users.users.kiri = {
     packages = with pkgs; [ mpc_cli ncmpcpp mpdris2 pulsemixer ];
