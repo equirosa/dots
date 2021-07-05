@@ -4,6 +4,7 @@
     ../editors/neovim.nix
     ../editors/emacs.nix
     ../env_vars.nix
+    ../flatpak.nix
     ../hardware/audio/default.nix
     ../home.nix
     ../shell.nix
