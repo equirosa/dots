@@ -15,7 +15,7 @@
     ../theme.nix
     ../tmux.nix
     ../tor.nix
-    ../graphical/wayland/sway.nix
+    ../graphical/xorg/awesome.nix
   ];
   environment = {
     homeBinInPath = true;
