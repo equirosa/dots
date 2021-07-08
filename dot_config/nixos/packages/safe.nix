@@ -18,6 +18,7 @@
     weechat # IRC + other protocols
 
     #### Dev Stuff ####
+    delta
     gibo # Generate ignore boilerplates
     gitMinimal
     lazygit
