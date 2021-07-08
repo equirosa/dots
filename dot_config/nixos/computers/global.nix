@@ -19,6 +19,9 @@
   ];
   environment = {
     homeBinInPath = true;
+    shellAliases = {
+      man = "batman";
+    };
   };
   users = {
     mutableUsers = false;

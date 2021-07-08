@@ -100,6 +100,7 @@
 
     #### Rust Replacements
     bat # Cat replacement
+    bat-extras.batman
     du-dust # du replacement
     exa # ls replacement
     fd # replacement for 'find'
