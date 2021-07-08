@@ -1,11 +1,12 @@
 { config, pkgs, ... }: {
   environment.pathsToLink = [ "/share/zsh" ];
-  users.users.kiri.shell = pkgs.fish;
-  #programs.zsh.enable = true;
-  programs.fish.enable = true;
+  users.users.kiri.shell = pkgs.zsh;
+  programs.zsh.enable = true;
+  /* programs.fish.enable = true; */
   home-manager.users.kiri = {
     programs = {
       zsh = {
+        enable = true;
         enableAutosuggestions = true;
         enableCompletion = true;
         autocd = true;
@@ -13,7 +14,9 @@
         history = { path = ".local/share/zsh/zsh_history"; };
         initExtra = ''
           any-nix-shell zsh --info-right | source /dev/stdin
-          [ "$(tty)" = "/dev/tty1" ] && exec sway
+        '';
+        loginExtra = ''
+          [ "$(tty)" = "/dev/tty1" ] && exec sway || startx
         '';
         plugins = [
           {
@@ -22,15 +25,11 @@
               owner = "zsh-users";
               repo = "zsh-syntax-highlighting";
               rev = "0.7.1";
-              sha256 = "039g3n59drk818ylcyvkciv8k9mf739cv6v4vis1h9fv9whbcmwl";
+              sha256 = "03r6hpb5fy4yaakqm3lbf4xcvd408r44jgpv4lnzl9asp4sb9qc0";
             };
           }
         ];
-        shellAliases = {};
-      };
-      fish = {
-        enable = true;
-        shellAbbrs = {
+        shellAliases = {
           # General
           c = "cd";
           cf = "cryfs";
@@ -100,7 +99,12 @@
           # Trash
           te = "trash-empty";
           tr = "trash-restore";
+
         };
+      };
+      fish = {
+        /* enable = true; */
+        shellAbbrs = { };
         interactiveShellInit = ''
           any-nix-shell fish --info-right | source
         '';
