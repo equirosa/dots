@@ -5,8 +5,9 @@
     shellAliases = {
       startx = "startx $XDG_CONFIG_HOME/x11/xinitrc";
     };
-    sessionVariables = { LOCK_CMD = "slock"; };
+    sessionVariables = { LOCK_CMD = "slock"; TERMINAL = "alacritty"; };
     systemPackages = with pkgs; [
+      alacritty
       dmenu
       rofi
       maim
