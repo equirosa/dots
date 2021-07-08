@@ -1,2 +1,7 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never
+
 reporting: "on"
 startuppopupversion: 1
