@@ -40,7 +40,11 @@
     };
     qt = {
       enable = true;
-      platformTheme = "gtk";
+      platformTheme = "gnome";
+      style = {
+        package = pkgs.materia-kde-theme;
+        name = "Materia-dark-compact";
+      };
     };
   };
 }
