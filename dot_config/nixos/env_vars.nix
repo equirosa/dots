@@ -4,6 +4,7 @@
     XDGOPEN = "${pkgs.xdg_utils}/bin/xdg-open";
     #TERMINAL = "${pkgs.alacritty}/bin/alacritty";
     TERMIMG = "${pkgs.viu}/bin/viu";
+    BAT_THEME = "gruvbox-dark";
     CALC = "${pkgs.bc}/bin/bc";
     MONITOR = "btm";
     BROWSER = "${pkgs.firefox}/bin/firefox";
