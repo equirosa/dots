@@ -54,7 +54,6 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = os.getenv("TERMINAL")
 editor = os.getenv("EDITOR") or "nano"
-editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -85,7 +84,7 @@ myawesomemenu = {
         "hotkeys",
         function() hotkeys_popup.show_help(nil, awful.screen.focused()) end
     }, {"manual", terminal .. " -e man awesome"},
-    {"edit config", editor_cmd .. " " .. awesome.conffile},
+    {"edit config", terminal .. " -e chezmoi edit --apply " .. awesome.conffile},
     {"restart", awesome.restart}, {"quit", function() awesome.quit() end}
 }
 
