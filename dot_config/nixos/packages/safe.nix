@@ -5,6 +5,7 @@
     firefox
     newsboat # RSS Feed reader
     nyxt # Another badass web browser
+    tor-browser-bundle-bin
     qutebrowser
     w3m # Lightweight cli web browser
 
