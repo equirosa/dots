@@ -46,7 +46,7 @@
             all-the-icons
             all-the-icons-dired
             doom-modeline
-            doom-themes
+            gruvbox-theme
             fira-code-mode
             rainbow-delimiters
           ]
