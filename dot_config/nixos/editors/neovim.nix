@@ -19,7 +19,7 @@
       withPython3 = true;
       extraConfig = ''
         lua << EOF
-          ${builtins.readFile /home/kiri/.config/nvim/init.lua}
+        ${builtins.readFile /home/kiri/.config/nvim/init.lua}
         EOF
       '';
       plugins = with pkgs.vimPlugins; [
