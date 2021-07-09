@@ -23,6 +23,11 @@
         EOF
       '';
       plugins = with pkgs.vimPlugins; [
+        direnv-vim
+        fzf-vim
+        lazygit-nvim
+        lf-vim
+        neuron-vim
         vim-nix
       ];
     };
