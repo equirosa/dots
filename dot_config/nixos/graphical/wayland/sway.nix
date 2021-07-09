@@ -1,4 +1,5 @@
 { config, pkgs, ... }: {
+  imports = [ ./global.nix ];
   nixpkgs.config = { wayland = true; };
   programs = {
     sway = {
