@@ -1,4 +1,7 @@
 #!/bin/sh
 
-bemenu-run -m "$(sway-get-focus)" -il 10 "$1"
-
+if is-wayland; then
+  bemenu-run -m "$(sway-get-focus)" -il 10 "$1"
+else
+  rofi -show run
+fi
