@@ -1,7 +1,9 @@
 { config, pkgs, ... }: {
-  imports = [ ./xserver.nix ];
+  imports = [
+    ../xserver.nix
+    ./global.nix
+  ];
   services.xserver = {
-    displayManager.startx.enable = true;
     windowManager = {
       i3 = {
         enable = true;

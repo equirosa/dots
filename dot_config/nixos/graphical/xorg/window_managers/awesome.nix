@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 {
-  imports = [ ./xserver.nix ];
+  imports = [
+    ../xserver.nix
+    ./global.nix
+  ];
   services.xserver = {
-    displayManager.startx.enable = true;
     windowManager.awesome = {
       enable = true;
+      luaModules = with pkgs; [
+        luarocks
+      ];
     };
   };
 }
