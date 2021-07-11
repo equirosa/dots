@@ -1,6 +1,4 @@
 #!/bin/sh
-set -euo
-
 # The famous "get a menu of emojis to copy" script,
 # adapted to Wayland by Eduardo Quiros.
 # Original Author: Luke Smith <luke@lukesmith.xyz>
