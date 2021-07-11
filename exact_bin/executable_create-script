@@ -4,6 +4,10 @@
 
 file="${HOME}/bin/$1"
 
+touch "${file}"
+
 printf "#!/bin/sh" >> "${file}" \
-	&& chmod +x "${file}" \
-	&& ${EDITOR} "${file}"
+	&& chmod +x "${file}"
+
+chezmoi add "${file}"
+chezmoi edit --apply "${file}"
