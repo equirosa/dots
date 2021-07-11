@@ -44,5 +44,7 @@ XF86Audio{Play,Stop,Next,Prev}
 Print
 	maim -s "$HOME/Pictures/screenshots/$(date --iso-8601=ns)".png
 
+super + F7
+  emoji
 super + q
 	xdo close
