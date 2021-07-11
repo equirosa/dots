@@ -2,6 +2,6 @@ git:
   paging:
     colorArg: always
     pager: delta --paging=never
-
+notARepository: 'skip'
 reporting: "on"
 startuppopupversion: 1
