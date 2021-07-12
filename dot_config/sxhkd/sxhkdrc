@@ -8,7 +8,7 @@ super + a
 	$TERMINAL -e pulsemixer
 
 super + d
-	dmenu_run -i &
+	menu-run
 
 super + i
 	$TERMINAL -e $MONITOR & disown
