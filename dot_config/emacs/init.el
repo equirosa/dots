@@ -1,7 +1,7 @@
 ;;; Code:
 (require 'iso-transl) ;; allow some keys (mainly accents in spanish)
 (set-face-attribute 'default nil :height 120)
-(load-theme 'doom-gruvbox t) ;; load preferred theme
+(load-theme 'gruvbox-dark-hard t) ;; load preferred theme
 (global-visual-line-mode t) ;; add visual line wrapping
 (setq
  gc-cons-threshold 100000000
