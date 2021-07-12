@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -e "$(command -v flatpak)" ] && flatpak update --assumeyes
+
+sudo nixos-rebuild switch --upgrade
