@@ -6,7 +6,7 @@ set {
     $up k
     $right l
     $menu menu-run | xargs swaymsg exec
-	$lock exec swaylock
+	$lock lockscreen
 	$wp_command mpvpaper -o "no-audio --loop-playlist"
 	$dyn_wp "/home/kiri/Videos/dynamic_wallpapers/ruby_rose.mp4"
 }
