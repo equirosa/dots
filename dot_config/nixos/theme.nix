@@ -9,7 +9,7 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = [ "Fira Code Nerd Font" "Twitter Color Emoji" ];
+        monospace = [ "Fira Code" "FiraCode Nerd Font" "Twitter Color Emoji" ];
         emoji = [ "Twitter Color Emoji" ];
       };
     };
@@ -17,7 +17,7 @@
     fonts = with pkgs; [
       dejavu_fonts
       emacs-all-the-icons-fonts
-      fira-code-symbols
+      fira-code
       font-awesome
       nerdfonts
       twitter-color-emoji
