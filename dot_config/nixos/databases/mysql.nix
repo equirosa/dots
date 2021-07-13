@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
   users.users.kiri.extraGroups = [ "mysql" ];
   services.mysql = {
