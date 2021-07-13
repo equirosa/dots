@@ -1,6 +1,6 @@
 { config, ... }: {
   security = {
-    chromiumSuidSandbox.enable = true;
+    # chromiumSuidSandbox.enable = true;
     doas = {
       enable = true;
       extraConfig = "permit kiri as root";
