@@ -13,7 +13,7 @@
         dotDir = ".config/zsh";
         history = { path = ".local/share/zsh/zsh_history"; };
         initExtra = ''
-          any-nix-shell zsh --info-right | source /dev/stdin
+          ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
         '';
         loginExtra = ''
           [ "$(tty)" = "/dev/tty1" ] && exec sway || startx
