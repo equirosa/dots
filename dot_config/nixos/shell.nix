@@ -70,6 +70,7 @@
           gc = "git commit -a";
           gcp = "git commit -a; git push";
           gch = "git checkout";
+          gha = "git-hydra push";
           gpl = "git pull";
           gps = "git push";
           gpsu = "git push -u origin main";
