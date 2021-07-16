@@ -16,7 +16,7 @@
           ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
         '';
         loginExtra = ''
-          [ "$(tty)" = "/dev/tty1" ] && exec sway || startx
+          if [ "$(tty)" = "/dev/tty1" ]; then exec sway || startx fi
         '';
         plugins = [
           {
