@@ -81,7 +81,6 @@
 
     #### Utilities ####
     age
-    any-nix-shell
     autotiling
     bc
     bottom
