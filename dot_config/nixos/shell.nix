@@ -62,7 +62,8 @@
           fi = "flatpak install";
           fl = "flatpak list";
           fs = "flatpak search";
-          fu = "flatpak uninstall";
+          fun = "flatpak uninstall";
+          fup = "flatpak update";
           # Git
           g = "git";
           gc = "git commit -a";
