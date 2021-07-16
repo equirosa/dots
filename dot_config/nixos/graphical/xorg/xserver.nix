@@ -5,8 +5,7 @@
     shellAliases = {
       startx = "startx $XDG_CONFIG_HOME/x11/xinitrc";
     };
-    sessionVariables = {
-    };
+    sessionVariables = { };
     systemPackages = with pkgs; [
       alacritty
       dmenu
