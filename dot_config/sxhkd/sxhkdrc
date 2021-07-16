@@ -1,5 +1,5 @@
 super + Return
-  $TERMINAL & disown
+  $TERMINAL
 
 super + shift + e
 	emacsclient -c
@@ -11,22 +11,22 @@ super + d
 	menu-run
 
 super + i
-	$TERMINAL -e $MONITOR & disown
+	$TERMINAL -e $MONITOR
 
 super + e
-  $TERMINAL -e $MAIL & disown
+  $TERMINAL -e $MAIL
 
 XF86Mail
 	$TERMINAL -e $MAIL
 
 super + r
-  $TERMINAL -e $FILE & disown
+  $TERMINAL -e $FILE
 
 super + w
 	tor-browser
 
 super + shift + w
-  $BROWSER & disown
+  $BROWSER
 
 super + x
 	lockscreen
