@@ -2,7 +2,7 @@
   environment.variables = {
     OPENER = "xdg-open";
     XDGOPEN = "${pkgs.xdg_utils}/bin/xdg-open";
-    #TERMINAL = "${pkgs.alacritty}/bin/alacritty";
+    TERMINAL = "${pkgs.kitty}/bin/kitty";
     TERMIMG = "${pkgs.viu}/bin/viu";
     BAT_THEME = "gruvbox-dark";
     CALC = "${pkgs.bc}/bin/bc";
