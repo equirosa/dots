@@ -55,6 +55,7 @@
           rm = "rm -i";
           s = "speedtest";
           t = "tremc";
+          wally = "wally-cli";
           wl = "watchlist";
           x = "xdg-open";
           # Editor stuff
