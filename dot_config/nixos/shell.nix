@@ -13,20 +13,19 @@
         history = { path = ".local/share/zsh/zsh_history"; };
         initExtra = ''
           ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
+          source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
+          source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+          source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
         '';
         loginExtra = ''
           if [ "$(tty)" = "/dev/tty1" ]; then exec sway || startx fi
         '';
+        zplug = {
+          enable = true;
+          plugins = [
+          ];
+        };
         plugins = [
-          {
-            name = "zsh-syntax-highlighting";
-            src = pkgs.fetchFromGitHub {
-              owner = "zsh-users";
-              repo = "zsh-syntax-highlighting";
-              rev = "0.7.1";
-              sha256 = "03r6hpb5fy4yaakqm3lbf4xcvd408r44jgpv4lnzl9asp4sb9qc0";
-            };
-          }
         ];
         shellAliases = {
           # General
