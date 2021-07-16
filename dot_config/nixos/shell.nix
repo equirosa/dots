@@ -2,7 +2,6 @@
   environment.pathsToLink = [ "/share/zsh" ];
   users.users.kiri.shell = pkgs.zsh;
   programs.zsh.enable = true;
-  /* programs.fish.enable = true; */
   home-manager.users.kiri = {
     programs = {
       zsh = {
