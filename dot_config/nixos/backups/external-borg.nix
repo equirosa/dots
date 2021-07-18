@@ -14,14 +14,14 @@
       paths = [
         "/home/kiri/.local/share/chezmoi"
         "/home/kiri/Documents"
-        "/home/kiri/Pictures"
-        "/home/kiri/Videos"
-        "/home/kiri/projects"
         "/home/kiri/Games"
-        "/home/kiri/Templates"
         "/home/kiri/Music"
-        "/home/kiri/bin"
+        "/home/kiri/Pictures"
         "/home/kiri/Sync"
+        "/home/kiri/Templates"
+        "/home/kiri/Videos"
+        "/home/kiri/bin"
+        "/home/kiri/projects"
       ];
       prune.keep = {
         daily = 7;
