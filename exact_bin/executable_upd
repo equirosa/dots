@@ -1,5 +1,6 @@
 #!/bin/sh
 
-[ -e "$(command -v flatpak)" ] && flatpak update --assumeyes
+[ -e "$(command -v flatpak)" ] && echo "UPDATING FLATPAKS"\
+	&& flatpak update --assumeyes
 
-sudo nixos-rebuild switch --upgrade
+echo "UPDATING NIXOS" && sudo nixos-rebuild switch --upgrade
