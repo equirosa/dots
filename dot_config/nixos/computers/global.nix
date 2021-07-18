@@ -1,21 +1,23 @@
 { config, lib, pkgs, ... }: {
   imports = [
     <home-manager/nixos>
-    ../editors/neovim.nix
+    ../direnv.nix
     ../editors/emacs.nix
+    ../editors/neovim.nix
     ../env_vars.nix
+    ../flameshot.nix
     ../flatpak.nix
+    ../graphical/xorg/awesome.nix
     ../hardware/audio/default.nix
     ../home.nix
-    ../shell.nix
-    ../misc/location.nix
     ../misc/cleanup.nix
     ../misc/gaming.nix
+    ../misc/location.nix
     ../packages/all.nix
+    ../shell.nix
     ../theme.nix
     ../tmux.nix
     ../tor.nix
-    ../graphical/xorg/awesome.nix
   ];
   environment = {
     homeBinInPath = true;
