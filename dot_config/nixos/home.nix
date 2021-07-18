@@ -2,7 +2,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    users.kiri = { pkgs, ... }: {
+    users.kiri = {
       programs = {
         ssh = {
           enable = true;
