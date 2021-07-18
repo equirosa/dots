@@ -34,6 +34,12 @@
       isNormalUser = true;
     };
   };
+  networking = {
+    hostFiles = [
+      "${pkgs.stevenblack-blocklist}/hosts"
+      "${pkgs.stevenblack-blocklist}/alternates/gambling/hosts"
+    ];
+  };
   nix = {
     autoOptimiseStore = true;
     gc = {
