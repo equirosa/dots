@@ -7,16 +7,16 @@ push() {
 }
 
 setup() {
-  [ ! -d ".git" ] && git init
-  git remote add origin "git@git.sr.ht:~eduardo_quiros/$1"
-  git remote add gl_mirror "git@gitlab.com:equirosa/$1.git"
-  git remote add gh_mirror "git@github.com:equirosa/$1.git"
+	[ ! -d ".git" ] && git init
+	git remote add origin "git@git.sr.ht:~eduardo_quiros/$1"
+	git remote add gl_mirror "git@gitlab.com:equirosa/$1.git"
+	git remote add gh_mirror "git@github.com:equirosa/$1.git"
 }
 
 init() {
-  git init "$1"
-  cd "$1"
-  setup "$1"
+	git init "$1"
+	cd "$1"
+	setup "$1"
 }
 
 $1
