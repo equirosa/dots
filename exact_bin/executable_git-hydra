@@ -1,9 +1,9 @@
 #!/bin/sh
 
 push() {
-  git push
-  git push gh_mirror
-  git push gl_mirror
+	for remote in origin gh_mirror gl_mirror; do
+		git push "${remote}"
+	done
 }
 
 setup() {
