@@ -2,6 +2,7 @@
 
 push() {
 	for remote in origin gh_mirror gl_mirror; do
+		echo "PUSHING TO ${remote}"
 		git push "${remote}"
 	done
 }
