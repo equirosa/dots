@@ -3,7 +3,7 @@
     OPENER = "xdg-open";
     XDGOPEN = "${pkgs.xdg_utils}/bin/xdg-open";
     TERMINAL = "${pkgs.kitty}/bin/kitty";
-    TERMIMG = "${pkgs.viu}/bin/viu";
+    TERMIMG = "${pkgs.timg}/bin/timg";
     BAT_THEME = "gruvbox-dark";
     CALC = "${pkgs.bc}/bin/bc";
     MONITOR = "btm";

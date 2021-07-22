@@ -66,7 +66,7 @@
     # Pictures
     imv # Image viewer
     swappy # quick image editing
-    viu # Terminal Image viewer
+    timg # Terminal Image viewer
 
     # Media Playback
     mpv
