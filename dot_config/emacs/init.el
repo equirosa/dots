@@ -9,6 +9,7 @@
  lsp-completion-provider :capf
  lsp-idle-delay 0.500) ; increase gc threshold
 (evil-mode 1)
+(epa-file-enable)
 
 ;; Keybindings
 (global-set-key (kbd "C-c C-c") 'deadgrep)
