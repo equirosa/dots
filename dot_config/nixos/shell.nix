@@ -12,10 +12,8 @@
         dotDir = ".config/zsh";
         history = { path = ".local/share/zsh/zsh_history"; };
         initExtra = ''
-          ${pkgs.chezmoi}/bin/chezmoi completion zsh | source /dev/stdin
           ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
           source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
-          source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
           source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
         '';
         loginExtra = ''
