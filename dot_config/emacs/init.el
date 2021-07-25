@@ -75,10 +75,10 @@
 
 ;;; Org Roam
 (setq
- org-roam-directory "~/Documents/wiki"
+ org-roam-directory (file-truename "~/Documents/wiki")
  org-roamc-db-location "~/.cache/org-roam.db"
- org-roam-tag-sources '(prop all-directories))
-(add-hook 'after-init-hook 'org-roam-mode)
+ org-roam-tag-sources '(prop all-directories)
+ org-roam-v2-ack t)
 
 ;; Window stuff
 (when (window-system)
