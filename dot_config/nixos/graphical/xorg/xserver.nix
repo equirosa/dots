@@ -7,7 +7,7 @@
     };
     sessionVariables = { };
     systemPackages = with pkgs; [
-      alacritty
+      devour
       dmenu
       rofi
       maim
