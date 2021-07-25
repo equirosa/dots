@@ -8,7 +8,7 @@ article-sort-order date-desc
 auto-reload yes
 confirm-exit yes
 download-full-page yes
-reload-threads 10
+reload-threads 12
 show-read-articles no
 show-read-feeds no
 
