@@ -1,7 +1,9 @@
 { pkgs, ... }: {
-  home-manager.users.kiri.programs.direnv = {
-    enable = true;
-    enableNixDirenvIntegration = true;
+  home-manager.users.kiri.programs = {
+    direnv = {
+      enable = true;
+      enableNixDirenvIntegration = true;
+    };
   };
   environment = {
     pathsToLink = [ "/share/nix-direnv" ];
@@ -12,4 +14,11 @@
     keep-outputs = true
     keep-derivations = true
   '';
+  nixpkgs.overlays = [
+    (self: super: {
+      nix-direnv = super.nix-direnv.override {
+        enableFlakes = true;
+      };
+    })
+  ];
 }
