@@ -140,10 +140,6 @@
           }
         ];
       };
-      direnv = {
-        enable = true;
-        enableNixDirenvIntegration = true;
-      };
       fzf = {
         enable = true;
         changeDirWidgetCommand = "${pkgs.fd}/bin/fd -uu --type d";

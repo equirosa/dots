@@ -1,9 +1,15 @@
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ nix-direnv ];
+  home-manager.users.kiri.programs.direnv = {
+    enable = true;
+    enableNixDirenvIntegration = true;
+  };
+  environment = {
+    pathsToLink = [ "/share/nix-direnv" ];
+    systemPackages = with pkgs; [ nix-direnv ];
+  };
   # nix options for derivations to persist garbage collection
   nix.extraOptions = ''
     keep-outputs = true
     keep-derivations = true
   '';
-  environment.pathsToLink = [ "/share/nix-direnv" ];
 }
