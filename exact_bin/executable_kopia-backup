@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kopia snapshot create Documents/ Downloads/ Templates/ Sync/ projects/ Videos/ Music/ .gnupg/ Pictures/ Games/itch/ bin/ && notify-send "kopia succeded"
