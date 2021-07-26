@@ -140,12 +140,13 @@ local tasklist_buttons = gears.table.join(
     end))
 
 local function set_wallpaper(s)
+    -- theme.wallpaper = os.getenv("XDG_DATA_HOME") .. "/background-image"
     -- Wallpaper
     if beautiful.wallpaper then
         local wallpaper = beautiful.wallpaper
         -- If wallpaper is a function, call it with the screen
         if type(wallpaper) == "function" then wallpaper = wallpaper(s) end
-        gears.wallpaper.maximized("~/.local/share/background-image", s, true)
+        gears.wallpaper.maximized(wallpaper, s, true)
     end
 end
 
