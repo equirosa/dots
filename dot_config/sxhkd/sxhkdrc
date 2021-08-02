@@ -44,6 +44,9 @@ XF86Audio{Play,Stop,Next,Prev}
 Print
 	flameshot gui
 
+super + z
+	gopassmenu
+
 super + F7
   emoji
 super + q
