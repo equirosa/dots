@@ -5,4 +5,4 @@
 clipboard="wl-copy"
 [ -z "${WAYLAND_DISPLAY}" ] && clipboard="xclip -selection clipboard"
 
-echo "$1" | ${clipboard}
+printf "$1" | ${clipboard}
