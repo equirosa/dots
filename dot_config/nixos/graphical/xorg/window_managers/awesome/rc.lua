@@ -65,10 +65,10 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     -- awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle
-    -- awful.layout.suit.floating, awful.layout.suit.tile,
+    awful.layout.suit.tile, awful.layout.suit.spiral.dwindle -- awful.layout.suit.floating,
     -- awful.layout.suit.tile.left, awful.layout.suit.tile.bottom,
-    -- awful.layout.suit.tile.top, awful.layout.suit.fair,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal, awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen, awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw
@@ -80,21 +80,21 @@ awful.layout.layouts = {
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
-    {
-        "hotkeys",
-        function() hotkeys_popup.show_help(nil, awful.screen.focused()) end
-    }, {"manual", terminal .. " -e man awesome"},
-    {"edit config", terminal .. " -e chezmoi edit --apply " .. awesome.conffile},
-    {"restart", awesome.restart}, {"quit", function() awesome.quit() end}
-}
+-- myawesomemenu = {
+--     {
+--         "hotkeys",
+--         function() hotkeys_popup.show_help(nil, awful.screen.focused()) end
+--     }, {"manual", terminal .. " -e man awesome"},
+--     {"edit config", terminal .. " -e chezmoi edit --apply " .. awesome.conffile},
+--     {"restart", awesome.restart}, {"quit", function() awesome.quit() end}
+-- }
 
-mymainmenu = awful.menu({
-    items = {
-        {"awesome", myawesomemenu, beautiful.awesome_icon},
-        {"open terminal", terminal}
-    }
-})
+-- mymainmenu = awful.menu({
+--     items = {
+--         {"awesome", myawesomemenu, beautiful.awesome_icon},
+--         {"open terminal", terminal}
+--     }
+-- })
 
 mylauncher = awful.widget.launcher({
     image = beautiful.awesome_icon,

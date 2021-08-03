@@ -7,7 +7,7 @@
     ../env_vars.nix
     ../flameshot.nix
     ../flatpak.nix
-    ../graphical/xorg/awesome.nix
+    ../graphical/xorg/window_managers/awesome.nix
     ../hardware/audio/default.nix
     ../home.nix
     ../misc/cleanup.nix
