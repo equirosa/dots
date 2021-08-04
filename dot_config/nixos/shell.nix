@@ -97,8 +97,10 @@
       fzf = {
         enable = true;
         changeDirWidgetCommand = "${pkgs.fd}/bin/fd -uu --type d";
+        changeDirWidgetOptions = [ "--preview 'exa -1 --icons {}'" ];
         defaultCommand = "${pkgs.fd}/bin/fd -uu --type f";
         fileWidgetCommand = "${pkgs.fd}/bin/fd -uu --type f";
+        fileWidgetOptions = [ "--preview 'pistol {}'" ];
       };
       starship.enable = true;
       keychain = {
