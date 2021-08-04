@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }: {
   imports = [
     <home-manager/nixos>
+    ../programs/all.nix
     ../direnv.nix
     ../editors/emacs.nix
     ../editors/neovim.nix
