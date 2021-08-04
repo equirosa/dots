@@ -16,14 +16,6 @@
           source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
           source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
         '';
-        loginExtra = ''
-          if [ "$(tty)" = "/dev/tty1" ]; then exec sway || startx fi
-        '';
-        zplug = {
-          enable = true;
-          plugins = [
-          ];
-        };
         plugins = [
         ];
         shellAliases = {
