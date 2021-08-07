@@ -23,7 +23,6 @@
   environment = {
     homeBinInPath = true;
     shellAliases = {
-      man = "batman";
     };
   };
   users = {
