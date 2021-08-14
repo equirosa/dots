@@ -1,3 +1,4 @@
 #!/bin/sh
 ln -f "$(realpath "$1")" "${HOME}/.local/share/background-image"
 [ -x "$(command -v sway)" ] && swaymsg reload
+[ -x "$(command -v awesome-client)"] && awesome-client 'awesome.restart()'
