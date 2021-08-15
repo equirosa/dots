@@ -23,8 +23,7 @@
   ];
   environment = {
     homeBinInPath = true;
-    shellAliases = {
-    };
+    shellAliases = { };
   };
   users = {
     mutableUsers = false;
