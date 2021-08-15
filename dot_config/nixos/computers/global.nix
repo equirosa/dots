@@ -14,6 +14,7 @@
     ../misc/cleanup.nix
     ../misc/gaming.nix
     ../misc/location.nix
+    ../nix.nix
     ../packages/all.nix
     ../shell.nix
     ../theme.nix
