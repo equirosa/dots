@@ -70,7 +70,6 @@
 
     # Media Playback
     mpv
-    python3Minimal
     youtube-dl # Video downloading utility
 
     #### Document ####
