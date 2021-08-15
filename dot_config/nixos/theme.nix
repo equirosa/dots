@@ -43,7 +43,7 @@
       platformTheme = "gnome";
       style = {
         package = pkgs.materia-kde-theme;
-        name = "Materia-dark-compact";
+        name = "Adwaita-Dark";
       };
     };
   };
