@@ -17,6 +17,7 @@
     ../packages/all.nix
     ../shell.nix
     ../theme.nix
+    ../terminal_emulators/kitty.nix
     ../tmux.nix
     ../tor.nix
   ];
