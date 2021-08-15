@@ -33,13 +33,16 @@
             pdf-tools
             # Org
             babel
+            org-appear
             org-superstar
             org-evil
+            org-link-beautify
+            org-noter
             org-ref
             org-roam
             org-roam-server
+            ox-pandoc
             plantuml-mode
-            neuron-mode
             # Utilities
             undo-tree
             # Style

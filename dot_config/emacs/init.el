@@ -69,10 +69,14 @@
 
 ;; Org stuff
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+(add-hook 'org-mode-hook 'org-appear-mode)
 (setq org-superstar-special-todo-items t)
 (setq org-startup-with-inline-images "inlineimages"
       org-pretty-entities t
-      org-pretty-entities-include-sub-superscripts t)
+      org-pretty-entities-include-sub-superscripts t
+      org-element-use-cache t)
+(org-link-beautify-mode 1)
+
 
 ;;; Org Roam
 (setq
