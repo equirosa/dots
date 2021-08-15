@@ -89,6 +89,7 @@
     gopass # Password Manager
     gopass-jsonapi
     keepassxc
+    kitty
     kopia
     libnotify # Notification stuff
     neuron-notes
