@@ -40,7 +40,6 @@
             org-noter
             org-ref
             org-roam
-            org-roam-server
             ox-pandoc
             plantuml-mode
             # Utilities
