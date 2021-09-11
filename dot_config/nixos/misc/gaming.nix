@@ -4,6 +4,8 @@
     eidolon
     lutris # General games client
     legendary-gl
+    mangohud
+    protonup
     taisei
   ];
   programs.steam.enable = true;
