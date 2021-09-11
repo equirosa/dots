@@ -11,8 +11,11 @@
         autocd = true;
         dotDir = ".config/zsh";
         history = { path = ".local/share/zsh/zsh_history"; };
+        profileExtra = ''
+          emacs --daemon
+        '';
         initExtra = ''
-					source <(${pkgs.cod}/bin/cod init $$ zsh)
+          source <(${pkgs.cod}/bin/cod init $$ zsh)
           ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
           source ${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh
           source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh
