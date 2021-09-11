@@ -88,6 +88,7 @@
     czkawka
     gopass # Password Manager
     gopass-jsonapi
+    jq
     keepassxc
     kitty
     kopia
