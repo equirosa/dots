@@ -9,6 +9,6 @@ sxhkd &
 picom &
 redshift &
 xrandr -r 144
-xrandr --output HDMI-1 --right-of DP-1 --mode 1920x1080 -r 60
+xrandr --output HDMI-A-0 --right-of DisplayPort-0 --mode 1920x1080 -r 60
 xidlehook --timer 300 "slock" "" & disown
 exec awesome
