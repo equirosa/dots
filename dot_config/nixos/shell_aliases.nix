@@ -25,7 +25,6 @@
       p = "gopass";
       pg = "ps aux | egrep --color";
       rm = "rm -i";
-      s = "speedtest";
       t = "tremc";
       wl = "watchlist";
       x = "xdg-open";
@@ -49,13 +48,14 @@
       # Nix Stuff
       elpa = "nix-env -f '<nixpkgs>' -qaP -A emacsPackages.elpaPackages";
       melpa = "nix-env -f '<nixpkgs>' -qaP -A emacsPackages.melpaPackages";
+      nodep = "nix-env -f '<nixpkgs>' -qaP -A nodePackages";
       nba = "nix-build -A";
       nup = "sudo nixos-rebuild switch --upgrade";
       npg = "nix-prefetch-git";
       npgh = "nix-prefetch-github";
       nre = "sudo nixos-rebuild switch --fast";
       nrw = "nix-shell -p nixpkgs-review --run 'nixpkgs-review wip'";
-      ns = "nix search";
+      ns = "nix search nixpkgs";
       ni = "nixinfo";
       nin = "nixinstall";
       ne = "nix-env -e";
@@ -70,7 +70,6 @@
       # Trash
       te = "trash-empty";
       tr = "trash-restore";
-
     };
   };
 }
