@@ -74,7 +74,6 @@
 
     #### Document ####
     ispell # spellchecking
-    libreoffice-fresh # For office documents
     pandoc
     texlive.combined.scheme-full # LaTeX stuff
 
