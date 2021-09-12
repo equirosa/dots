@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env nix-shell
+#! nix-shell -i sh -p kopia
 
-kopia snapshot create Documents/ Downloads/ Templates/ Sync/ projects/ Videos/ Music/ .gnupg/ Pictures/ Games/itch/ bin/ && notify-send "kopia succeded"
+kopia snapshot create ~/Documents/ ~/Downloads/ ~/Templates/ ~/Sync/ ~/projects/ ~/Videos/ ~/Music/ ~/.gnupg/ ~/Pictures/ ~/Games/itch/ ~/bin/ && notify-send "kopia succeded"

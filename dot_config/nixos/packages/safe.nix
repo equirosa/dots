@@ -89,7 +89,6 @@
     jq
     keepassxc
     kitty
-    kopia
     libnotify # Notification stuff
     neuron-notes
     remmina
