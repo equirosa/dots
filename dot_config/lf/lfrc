@@ -14,7 +14,7 @@ set ratios 2:4
 # Custom Mappings
 map <enter> shell
 map <backspace2> set hidden!
-map <delete> $trash-put "$fx"
+map <delete> to-trash "$fx"
 map <shift><delete> $rm "$fx"
 map bg %make-wallpaper "$f"
 map M push %mkdir<space>
@@ -37,4 +37,10 @@ map zx &arc unarchive "$f"
 cmd open ${{
 for f in "$fx";
 do setsid xdg-open "$f" > /dev/null 2> /dev/null & done
+}}
+
+cmd to-trash ${{
+for f in "$fx";
+do trash-put "$f"
+done;
 }}
