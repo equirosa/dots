@@ -1,29 +1,29 @@
 { config, pkgs, ... }: {
   users.users.kiri.packages = with pkgs; [
     #### Browsers ####
-    amfora
+    /* amfora */
     firefox
     newsboat # RSS Feed reader
-    nyxt # Another badass web browser
+    /* nyxt # Another badass web browser */
     tor-browser-bundle-bin
-    qutebrowser
+    /* qutebrowser */
     w3m # Lightweight cli web browser
 
     #### Comms ####
     aerc # Mail reader
-    dino # XMPP client
-    mumble # Cool voice chat
+    /* dino # XMPP client */
+    /* mumble # Cool voice chat */
     signal-desktop
-    toot # Mastodon client
-    tut # Mastodon client
-    weechat # IRC + other protocols
+    /* toot # Mastodon client */
+    /* tut # Mastodon client */
+    /* weechat # IRC + other protocols */
 
     #### Dev Stuff ####
     delta
-    gibo # Generate ignore boilerplates
+    /* gibo # Generate ignore boilerplates */
     gitMinimal
     lazygit
-    licensor
+    /* licensor */
 
     #### File Management ####
     archiver
@@ -42,26 +42,19 @@
     croc # Sync file transfer
     ffsend # Async file transfer
     # onionshare # Tor file transfer
-    syncthing
     transmission # Torrent client
     tremc # Transmission frontend TUI
 
     #### Nixpkgs stuff
-    nix-prefetch-git # get Git repo metadata
-    nix-prefetch-github # get GitHub repo metadata
-    nixpkgs-review
     nox # YAY but for nixpkgs intead of AUR
 
     # Formatters
-    black
-    luaformatter
     nixpkgs-fmt
     shfmt
 
     # LSPs
     efm-langserver
     rnix-lsp
-    sumneko-lua-language-server
 
     # Pictures
     imv # Image viewer
@@ -78,7 +71,6 @@
 
     #### Utilities ####
     age
-    autotiling
     bc
     bottom
     chezmoi
@@ -87,12 +79,10 @@
     gopass # Password Manager
     gopass-jsonapi
     jq
-    keepassxc
     kitty
     libnotify # Notification stuff
     neuron-notes
-    remmina
-    speedtest-cli
+    /* remmina */
     tealdeer
     udiskie # Disk auto-mount utility
     xdg_utils
@@ -103,5 +93,12 @@
     exa # ls replacement
     fd # replacement for 'find'
     ripgrep # grep replacement
+
+    # Scripts
+    (pkgs.writeScriptBin "sp" ''
+      #!/usr/bin/env nix-shell
+      #! nix-shell -i sh -p speedtest-cli
+      exec speedtest
+    '')
   ];
 }
