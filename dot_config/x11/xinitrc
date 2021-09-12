@@ -10,5 +10,5 @@ picom &
 redshift &
 xrandr -r 144
 xrandr --output HDMI-A-0 --right-of DisplayPort-0 --mode 1920x1080 -r 60
-xidlehook --timer 300 "slock" "" & disown
+xidlehook --timer 300 "lockscreen" "" & disown
 exec awesome
