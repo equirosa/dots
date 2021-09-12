@@ -1,4 +1,7 @@
 { config, pkgs, ... }: {
+  users.users.kiri.packages = with pkgs; [
+    swappy # quick image editing
+  ];
   nixpkgs.overlays = [
     (self: super: {
       wl-clipboard-x11 = super.stdenv.mkDerivation rec {
