@@ -1,0 +1,20 @@
+#!/bin/sh
+
+meme_directory="${HOME}/Pictures/phone/memes"
+[ -d "${meme_directory}" ] || mkdir -p "${meme_directory}"
+
+add () {
+	echo "Input a new name, or just press Enter\n"
+	read new_name
+	[ -z "${new_name}" ] && new_name="$2"
+	file="$(realpath "$1")"
+	mv "${file}" "${meme_directory}"
+}
+
+case "$1" in
+	*.jpg | *.jpeg | *.png | *.webp) add "$1" ;;
+	add) add "$2" ;;
+	list) ls -l "${meme_directory}";;
+	*) echo "Nothing to do..." ;;
+esac
+
