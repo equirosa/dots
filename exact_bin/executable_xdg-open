@@ -15,5 +15,6 @@ case "$1" in
 		;;
 	*.jpeg | *.jpg | *.png) "${IMG}" "$1" ;;
 	mailto*) aerc "$1" ;;
+	*.pdf) ${READER} "$1" ;;
 	*) ${XDGOPEN} "$1" ;;
 esac
