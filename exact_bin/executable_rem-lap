@@ -1,5 +1,6 @@
 #!/bin/sh
+chosen=$(find "${XDG_DATA_HOME}/remmina/" -name "*.remmina")
 
-chosen=$(find "${XDG_DATA_HOME}/remmina/" -name "*.remmina" | menu)
+[ "$(echo "${chosen}" | wc -l )" -gt 1 ] && chosen=$(find "${XDG_DATA_HOME}/remmina/" -name "*.remmina" | menu)
 
 remmina -c "${chosen}"
