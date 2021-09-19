@@ -10,7 +10,10 @@
         enableCompletion = true;
         autocd = true;
         dotDir = ".config/zsh";
-        history = { path = ".local/share/zsh/zsh_history"; };
+        history = {
+          size = 100000;
+          path = ".local/share/zsh/zsh_history";
+        };
         profileExtra = ''
           emacs --daemon
         '';
