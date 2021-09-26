@@ -1,8 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env nix-shell
+#! nix-shell -i sh --packages yt-dlp
 case "$1" in
-	http*) setsid youtube-dl --restrict-filenames\
+	http*) setsid yt-dlp --restrict-filenames\
+		--sponsorblock-mark all\
+		--embed-subs\
+		--embed-metadata\
 		-o "${HOME}/Videos/watchlist/$(date +%s)-%(title)s.%(ext)s"\
-		"$1" ;;
+		"$1" >>/dev/null & ;;
 	"") setsid mpv "${HOME}/Videos/watchlist/" ;;
 	*) setsid mv "$1" "${HOME}/Videos/watchlist/$(date +%s)-$1" ;;
 esac
