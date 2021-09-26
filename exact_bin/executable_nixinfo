@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env nix-shell
+#! nix-shell -i sh -p jq bat
 
-nix-env -qaP --json "$1" | bat -pl json
+information="$(nix-env -qaP --json "$1")"
+
+printf "${information}" | bat -pl json
