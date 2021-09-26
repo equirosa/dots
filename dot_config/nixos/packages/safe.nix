@@ -100,5 +100,10 @@
       #! nix-shell -i sh -p speedtest-cli
       exec speedtest
     '')
+    (pkgs.writeScriptBin "dlp" ''
+      #!/usr/bin/env nix-shell
+      #! nix-shell -i sh --packages yt-dlp
+      yt-dlp --sponsorblock-mark all --embed-subs --embed-metadata --restrict-filenames "$1"
+    '')
   ];
 }
