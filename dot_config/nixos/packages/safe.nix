@@ -62,7 +62,6 @@
 
     # Media Playback
     mpv
-    youtube-dl # Video downloading utility
 
     #### Document ####
     ispell # spellchecking
@@ -81,8 +80,6 @@
     jq
     kitty
     libnotify # Notification stuff
-    neuron-notes
-    /* remmina */
     tealdeer
     udiskie # Disk auto-mount utility
     xdg_utils
