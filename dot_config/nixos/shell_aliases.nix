@@ -13,6 +13,7 @@
       che = "chezmoi edit --apply";
       chf = "chezmoi forget";
       chm = "chezmoi managed";
+      chr = "chezmoi remove";
       chu = "chezmoi unmanaged";
       cat = "bat -p";
       dg = "dragon -a -x";
@@ -50,6 +51,7 @@
       melpa = "nix-env -f '<nixpkgs>' -qaP -A emacsPackages.melpaPackages";
       nodep = "nix-env -f '<nixpkgs>' -qaP -A nodePackages";
       nba = "nix-build -A";
+      neq = "nix-env -q";
       nup = "sudo nixos-rebuild switch --upgrade";
       npg = "nix-prefetch-git";
       npgh = "nix-prefetch-github";
