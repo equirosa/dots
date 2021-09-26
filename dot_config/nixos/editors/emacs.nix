@@ -23,14 +23,11 @@
             tree-sitter-langs
             ## Nix Stuff
             envrc
-            nix-mode
             # Misc.
-            deadgrep
             evil
             flycheck
             flycheck-plantuml
             move-dup
-            pdf-tools
             # Org
             babel
             org-appear
@@ -49,7 +46,6 @@
             all-the-icons-dired
             doom-modeline
             gruvbox-theme
-            fira-code-mode
             rainbow-delimiters
           ]
       );
