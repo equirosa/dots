@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ -z "${WAYLAND_DISPLAY}"]; then
-    rofi -dmenu -i
-else
+if is-wayland; then
     bemenu -m "$(sway-get-focus)" -il 10 "$1"
+else
+    rofi -dmenu -i
 fi
 
 
