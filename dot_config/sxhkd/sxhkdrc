@@ -14,10 +14,7 @@ super + i
 	$TERMINAL -e $MONITOR
 
 super + e
-  $TERMINAL -e $MAIL
-
-XF86Mail
-	$TERMINAL -e $MAIL
+  $TERMINAL -e mail-client
 
 super + r
   $TERMINAL -e $FILE
