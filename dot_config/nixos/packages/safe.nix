@@ -1,29 +1,20 @@
 { config, pkgs, ... }: {
   users.users.kiri.packages = with pkgs; [
     #### Browsers ####
-    /* amfora */
     firefox
     newsboat # RSS Feed reader
-    /* nyxt # Another badass web browser */
+    nyxt # Another badass web browser
     tor-browser-bundle-bin
-    /* qutebrowser */
     w3m # Lightweight cli web browser
 
     #### Comms ####
     aerc # Mail reader
-    /* dino # XMPP client */
-    /* mumble # Cool voice chat */
     signal-desktop
-    /* toot # Mastodon client */
-    /* tut # Mastodon client */
-    /* weechat # IRC + other protocols */
 
     #### Dev Stuff ####
     delta
-    /* gibo # Generate ignore boilerplates */
     gitMinimal
     lazygit
-    /* licensor */
 
     #### File Management ####
     archiver
@@ -41,7 +32,6 @@
     cinnamon.warpinator
     croc # Sync file transfer
     ffsend # Async file transfer
-    # onionshare # Tor file transfer
     transmission # Torrent client
     tremc # Transmission frontend TUI
 
@@ -101,6 +91,11 @@
       #!/usr/bin/env nix-shell
       #! nix-shell -i sh --packages yt-dlp
       yt-dlp --sponsorblock-mark all --embed-subs --embed-metadata --restrict-filenames "$1"
+    '')
+    (pkgs.writeScriptBin "nixinfo" ''
+      #!/usr/bin/env sh
+      information="$(nix-env -qaP --json "$1")"
+      printf "$information" | ${pkgs.bat}/bin/bat -pl json
     '')
   ];
 }
