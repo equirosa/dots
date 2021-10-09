@@ -97,5 +97,14 @@
       information="$(nix-env -qaP --json "$1")"
       printf "$information" | ${pkgs.bat}/bin/bat -pl json
     '')
+    (pkgs.writeScriptBin "rem-lap" ''
+      #!/usr/bin/env nix-shell
+      #! nix-shell -i sh -p remmina
+      chosen=$(find "$XDG_DATA_HOME/remmina/" -name "*.remmina")
+
+      [ "$(echo "$chosen" | wc -l )" -gt 1 ] && chosen=$(echo "$chosen" | menu)
+
+      remmina -c "$chosen"
+    '')
   ];
 }
