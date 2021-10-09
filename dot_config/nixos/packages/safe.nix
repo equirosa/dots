@@ -110,5 +110,9 @@
 
       remmina -c "$chosen"
     '')
+    (pkgs.writeScriptBin "find-root" ''
+      #!/bin/sh
+      readlink -f "$(which "$1")"
+    '')
   ];
 }
