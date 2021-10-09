@@ -1,4 +1,9 @@
 { config, pkgs, ... }: {
+  programs = {
+    xwayland = {
+      enable = true;
+    };
+  };
   users.users.kiri.packages = with pkgs; [
     swappy # quick image editing
   ];

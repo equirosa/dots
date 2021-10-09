@@ -18,7 +18,6 @@
         swaylock
         wf-recorder # screen video capture
         wl-clipboard # clipboard
-        xwayland # Xorg compat
         # screenshots
         grim
         jq
