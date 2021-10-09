@@ -69,7 +69,10 @@
       #(import ../nixpkgs/overlays/qutebrowser.nix)
       (self: super: {
         mpv = super.mpv-with-scripts.override {
-          scripts = [ self.mpvScripts.sponsorblock ];
+          scripts = [
+            self.mpvScripts.sponsorblock
+            self.mpvScripts.mpv-playlistmanager
+          ];
         };
       })
     ];
