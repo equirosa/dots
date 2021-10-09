@@ -30,6 +30,7 @@
             tree-sitter-langs
             ## Nix Stuff
             envrc
+            nix-mode
             # Misc.
             evil
             flycheck
