@@ -8,4 +8,7 @@ case "$1" in
 		;;
 esac
 
-2clip "${url}"
+notification="Url: ${url} has been copied to your clipboard!"
+
+2clip "${url}" && printf "${notification}"
+notify-send "${notification}"
