@@ -1,6 +1,18 @@
 #!/bin/sh
+LCYAN='\033[1;36m'
+LGREEN='\033[1;32m'
+NC='\033[0m' # No Color
 
-[ -e "$(command -v flatpak)" ] && echo "UPDATING FLATPAKS"\
-	&& flatpak update --assumeyes
+print_color () {
+	printf "${LCYAN}UPDATING $1${NC}\n"
+}
 
-echo "UPDATING NIXOS" && sudo nixos-rebuild switch --upgrade
+print_sucess () {
+	printf "${LGREEN}SUCCESS${NC} ✅\n"
+}
+
+[ -e "$(command -v flatpak)" ] && print_color "FLAPAKS" \
+	&& flatpak update --assumeyes && print_sucess
+
+print_color "NIXOS" && sudo nixos-rebuild switch --upgrade && print_sucess
+
