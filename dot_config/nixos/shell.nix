@@ -15,7 +15,7 @@
           path = ".local/share/zsh/zsh_history";
         };
         profileExtra = ''
-          emacs --daemon
+          systemctl --user start emacs.service
         '';
         initExtra = ''
           source <(${pkgs.cod}/bin/cod init $$ zsh)
