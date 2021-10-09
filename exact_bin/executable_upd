@@ -14,5 +14,9 @@ print_sucess () {
 [ -e "$(command -v flatpak)" ] && print_color "FLAPAKS" \
 	&& flatpak update --assumeyes && print_sucess
 
+[ -e "$(command -v nvim)" ] && print_color "NEOVIM"\
+	&& nvim +"au User PackerComplete qa" +PackerSync && print_sucess
+# +"silent TSUpdateSync"
+
 print_color "NIXOS" && sudo nixos-rebuild switch --upgrade && print_sucess
 
