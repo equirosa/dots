@@ -9,6 +9,7 @@
     ../flameshot.nix
     ../flatpak.nix
     ../graphical/xorg/window_managers/awesome.nix
+    ../graphical/wayland/sway.nix
     ../hardware/audio/default.nix
     ../home.nix
     ../misc/cleanup.nix
