@@ -97,6 +97,10 @@
       information="$(nix-env -qaP --json "$1")"
       printf "$information" | ${pkgs.bat}/bin/bat -pl json
     '')
+    (pkgs.writeScriptBin "destroy" ''
+      #!/bin/sh
+      shred -zvu "$1"
+    '')
     (pkgs.writeScriptBin "rem-lap" ''
       #!/usr/bin/env nix-shell
       #! nix-shell -i sh -p remmina
