@@ -76,6 +76,9 @@
       org-element-use-cache t)
 (org-link-beautify-mode 1)
 
+;;; org-books
+(setq org-books-file "~/Documents/org/reading_list.org")
+
 
 ;;; Org Roam
 (setq

@@ -39,6 +39,7 @@
             # Org
             babel
             org-appear
+            org-books
             org-superstar
             org-evil
             org-link-beautify
