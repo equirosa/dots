@@ -11,6 +11,13 @@
   ];
   home-manager.users.kiri = {
     home.packages = with pkgs; [ sqlite ];
+    services.emacs = {
+      enable = true;
+      client = {
+        enable = true;
+      };
+      socketActivation.enable = true;
+    };
     programs.emacs = {
       enable = true;
       package = pkgs.emacsPgtkGcc;
