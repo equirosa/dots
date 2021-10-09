@@ -14,6 +14,7 @@
       chf = "chezmoi forget";
       chm = "chezmoi managed";
       chr = "chezmoi remove";
+      chra = "chezmoi re-add";
       chu = "chezmoi unmanaged";
       cat = "bat -p";
       dg = "dragon -a -x";
@@ -61,6 +62,7 @@
       ni = "nixinfo";
       nin = "nixinstall";
       ne = "nix-env -e";
+      nr = "nix run";
       nsp = "nix-shell -p";
       nj = "nix-env -qaP --json";
       nx = "nix-env -qaP --description";
