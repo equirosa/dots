@@ -10,7 +10,7 @@
     )
   ];
   home-manager.users.kiri = {
-    home.packages = with pkgs; [ sqlite plantuml ];
+    home.packages = with pkgs; [ sqlite ];
     programs.emacs = {
       enable = true;
       package = pkgs.emacsPgtkGcc;
@@ -38,7 +38,6 @@
             org-ref
             org-roam
             ox-pandoc
-            plantuml-mode
             # Utilities
             undo-tree
             # Style
