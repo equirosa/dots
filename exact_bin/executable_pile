@@ -14,6 +14,7 @@ latex_cleanup() {
 case "${extension}" in
 	c) cc "${file}" -o "${basename}" ;;
 	cpp) c++ "${file}" -o "${basename}" ;;
+	docx) libreoffice --convert-to pdf "${file}" ;;
 	md) pandoc -t ms --highlight-style kate -s -o "${basename}".pdf "${file}" ;;
 #	md) lowdown -X title $< -sTms "${file}" | pdfroff -itk -mspdf  >"${basename}.pdf" ;;
 	ms) groff -k -ms "${file}" >> "${basename}.pdf" ;;
