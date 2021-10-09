@@ -17,6 +17,8 @@
 (global-set-key (kbd "C-c C-z") 'fzf)
 (global-set-key (kbd "M-j") 'move-dup-move-lines-down)
 (global-set-key (kbd "M-k") 'move-dup-move-lines-up)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x w") 'delete-frame)
 
 ;; Integrations
 (add-hook 'after-init-hook #'global-company-mode)
@@ -67,6 +69,7 @@
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
 ;; Org stuff
+(setq org-highlight-latex-and-related '(latex))
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 (add-hook 'org-mode-hook 'org-appear-mode)
 (setq org-superstar-special-todo-items t)
