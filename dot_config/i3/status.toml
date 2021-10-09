@@ -4,7 +4,7 @@ icons = "awesome5"
 [[block]]
 block = "keyboard_layout"
 driver = "sway"
-sway_kb_identifier = "1133:16494:Logitech_K800"
+sway_kb_identifier = "12951:6505:ZSA_Moonlander_Mark_I_Keyboard"
 
 [[block]]
 block = "disk_space"
