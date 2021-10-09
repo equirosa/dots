@@ -10,9 +10,11 @@ case "$1" in
 	http*)
 		case "$1" in
 			*.jpg | *.png) curl -L "$1" -o "/tmp/image" && ${IMG} "/tmp/image" ;;
-			*) ${XDGOPEN} "$1" ;;
+			*) ${BROWSER} "$1" ;;
 		esac
 		;;
+	gemini*)
+		lagrange "$1" ;;
 	*.jpeg | *.jpg | *.png) "${IMG}" "$1" ;;
 	mailto*) aerc "$1" ;;
 	*.pdf) ${READER} "$1" ;;

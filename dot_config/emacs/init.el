@@ -57,7 +57,6 @@
 (electric-pair-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode) ;; Use rainbow delimiters in programming mode
 ;; (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
-(if (display-graphic-p) global-fira-code-mode)
 
 ;; Emojis, yes, emojis
 (if (display-graphic-p)
@@ -90,11 +89,6 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (tooltip-mode -1))
-
-;; Plant UML
-(setq plantuml-executable-path (executable-find "plantuml"))
-(setq plantuml-default-exec-mode 'executable)
-(setq plantuml-output-type "txt")
 
 ;; Direnv
 (envrc-global-mode)
