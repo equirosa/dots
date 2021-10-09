@@ -6,6 +6,7 @@
       enable = true;
       extraPackages = with pkgs; [
         #libsixel
+        autotiling
         bemenu
         brightnessctl
         foot
