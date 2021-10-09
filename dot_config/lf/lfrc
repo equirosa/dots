@@ -22,6 +22,7 @@ map W %watchlist "$f"
 map L $lazygit
 map C $chezmoi add "$f"
 map T push $touch<space>
+map V %mpv "$fx"
 
 # Sending
 map D &dragon -a -x "$fx"
