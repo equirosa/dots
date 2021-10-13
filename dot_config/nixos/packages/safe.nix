@@ -2,6 +2,7 @@
   users.users.kiri.packages = with pkgs; [
     #### Browsers ####
     firefox
+    monolith
     newsboat # RSS Feed reader
     nyxt # Another badass web browser
     tor-browser-bundle-bin
