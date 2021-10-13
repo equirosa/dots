@@ -26,13 +26,26 @@
 
     # 'Less' stuff
     LESS = "-R";
-    LESS_TERMCAP_mb = "$(printf '%b' '[1;31m')";
-    LESS_TERMCAP_md = "$(printf '%b' '[1;36m')";
-    LESS_TERMCAP_me = "$(printf '%b' '[0m')";
-    LESS_TERMCAP_so = "$(printf '%b' '[01;44;33m')";
-    LESS_TERMCAP_se = "$(printf '%b' '[0m')";
-    LESS_TERMCAP_us = "$(printf '%b' '[1;32m')";
-    LESS_TERMCAP_ue = "$(printf '%b' '[0m')";
+    LESS_TERMCAP_mb = "$(tput bold; tput setaf 2)";
+    LESS_TERMCAP_md = "$(tput bold; tput setaf 6)";
+    LESS_TERMCAP_me = "$(tput sgr0)";
+    LESS_TERMCAP_so = "$(tput bold; tput setaf 16; tput setab 14)";
+    LESS_TERMCAP_se = "$(tput rmso; tput sgr0)";
+    LESS_TERMCAP_us = "$(tput smul; tput bold; tput setaf 4)";
+    LESS_TERMCAP_ue = "$(tput rmul; tput sgr0)";
+    LESS_TERMCAP_mr = "$(tput rev)";
+    LESS_TERMCAP_mh = "$(tput dim)";
+    LESS_TERMCAP_ZN = "$(tput ssubm)";
+    LESS_TERMCAP_ZV = "$(tput rsubm)";
+    LESS_TERMCAP_ZO = "$(tput ssupm)";
+    LESS_TERMCAP_ZW = "$(tput rsupm)";
+    # LESS_TERMCAP_mb = "$(printf '%b' '[1;31m')";
+    # LESS_TERMCAP_md = "$(printf '%b' '[1;36m')";
+    # LESS_TERMCAP_me = "$(printf '%b' '[0m')";
+    # LESS_TERMCAP_so = "$(printf '%b' '[01;44;33m')";
+    # LESS_TERMCAP_se = "$(printf '%b' '[0m')";
+    # LESS_TERMCAP_us = "$(printf '%b' '[1;32m')";
+    # LESS_TERMCAP_ue = "$(printf '%b' '[0m')";
 
     # Pistol
     PISTOL_CHROMA_FORMATTER = "terminal16m";
