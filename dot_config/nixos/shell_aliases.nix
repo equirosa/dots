@@ -3,8 +3,21 @@
     shellAliases = {
       # General
       c = "cd";
-      cf = "cryfs";
-      cfu = "cryfs-unmount";
+      cat = "bat -p";
+      dg = "dragon -a -x";
+      k9 = "kill -9";
+      l = "exa -l --icons";
+      ll = "exa -la --icons";
+      lt = "exa -T";
+      md = "mkdir -p";
+      p = "gopass";
+      pg = "ps aux | egrep --color";
+      rm = "rm -i";
+      t = "tremc";
+      v = "$EDITOR";
+      wl = "watchlist";
+      x = "xdg-open";
+      # Chezmoi
       ch = "chezmoi";
       cha = "chezmoi add";
       chap = "chezmoi apply";
@@ -16,22 +29,9 @@
       chr = "chezmoi remove";
       chra = "chezmoi re-add";
       chu = "chezmoi unmanaged";
-      cat = "bat -p";
-      dg = "dragon -a -x";
-      yd = "youtube-dl";
-      k9 = "kill -9";
-      l = "exa -l --icons";
-      ll = "exa -la --icons";
-      lt = "exa -T";
-      md = "mkdir -p";
-      p = "gopass";
-      pg = "ps aux | egrep --color";
-      rm = "rm -i";
-      t = "tremc";
-      wl = "watchlist";
-      x = "xdg-open";
-      # Editor stuff
-      v = "$EDITOR";
+      # CryFS
+      cf = "cryfs";
+      cfu = "cryfs-unmount";
       # Flatpak
       fi = "flatpak install";
       fl = "flatpak list";
@@ -74,6 +74,7 @@
       # Trash
       te = "trash-empty";
       tr = "trash-restore";
+      tp = "trash-put";
     };
   };
 }
