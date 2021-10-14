@@ -51,9 +51,6 @@
     imv # Image viewer
     timg # Terminal Image viewer
 
-    # Media Playback
-    mpv
-
     #### Document ####
     ispell # spellchecking
     pandoc
