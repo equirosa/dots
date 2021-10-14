@@ -108,7 +108,7 @@
 
       remmina -c "$chosen"
     '')
-    (pkgs.writeScriptBin "find-root" ''
+    (pkgs.writeScriptBin "nix-find-root" ''
       #!/bin/sh
       readlink -f "$(which "$1")"
     '')
