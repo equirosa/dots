@@ -27,10 +27,8 @@
     pistol #Previewer
     poppler_utils
     trash-cli # Trash files
-    zathura # PDF Reader
 
     #### File Transfer ####
-    cinnamon.warpinator
     croc # Sync file transfer
     ffsend # Async file transfer
     transmission # Torrent client
