@@ -84,9 +84,8 @@
       exec speedtest
     '')
     (pkgs.writeScriptBin "dlp" ''
-      #!/usr/bin/env nix-shell
-      #! nix-shell -i sh --packages yt-dlp
-      yt-dlp --sponsorblock-mark all --embed-subs --embed-metadata --restrict-filenames "$1"
+      #!/usr/bin/env sh
+      ${pkgs.yt-dlp}/bin/yt-dlp --sponsorblock-mark all --embed-subs --embed-metadata --restrict-filenames "$1"
     '')
     (pkgs.writeScriptBin "nixinfo" ''
       #!/usr/bin/env sh
@@ -95,24 +94,26 @@
     '')
     (pkgs.writeScriptBin "destroy" ''
       #!/bin/sh
-      shred -zvu "$1"
+      ${pkgs.coreutils}/bin/shred -zvu "$1"
     '')
     (pkgs.writeScriptBin "rem-lap" ''
       #!/usr/bin/env nix-shell
       #! nix-shell -i sh -p remmina
       chosen=$(find "$XDG_DATA_HOME/remmina/" -name "*.remmina")
 
-      [ "$(echo "$chosen" | wc -l )" -gt 1 ] && chosen=$(echo "$chosen" | menu)
+      [ "$(${pkgs.coreutils}/bin/echo "$chosen" | ${pkgs.coreutils}/bin/wc -l
+      )" -gt 1 ] && chosen=$(${pkgs.coreutils}/bin/echo "$chosen" | menu)
 
       remmina -c "$chosen"
     '')
     (pkgs.writeScriptBin "nix-find-root" ''
       #!/bin/sh
-      readlink -f "$(which "$1")"
+      ${pkgs.coreutils}/bin/readlink -f "$(which "$1")"
     '')
     (pkgs.writeScriptBin "show-ansi-escapes" ''
-      for (( i = 30; i < 38; i++ )); do
-        echo -e "\033[0;"$i"m Normal: (0;$i); \033[1;"$i"m Light: (1;$i);"
+      #!${pkgs.dash}/bin/dash
+      for i in 30 31 32 33 34 35 36 37 38; do
+        ${pkgs.coreutils}/bin/echo -e "\033[0;"$i"m Normal: (0;$i); \033[1;"$i"m Light: (1;$i);"
         done
     '')
   ];
