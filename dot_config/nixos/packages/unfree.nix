@@ -2,7 +2,7 @@
 { config, pkgs, lib, ... }: {
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
-      "anydesk" # TODO: Consider replacing with https://remotely.one
+      "anydesk" # TODO: Consider replacing with https://github.com/rustdesk/rustdesk or https://remotely.one
       "discord" # TODO: Obviously, replace with matrix or XMPP
       "steam"
       "steam-runtime"
