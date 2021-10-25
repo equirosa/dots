@@ -29,23 +29,12 @@
         shellAliases = {
           # General
           c = "cd";
-          cf = "cryfs";
-          cfu = "cryfs-unmount";
-          ch = "chezmoi";
-          cha = "chezmoi add";
-          chap = "chezmoi apply";
-          chc = "chezmoi cd";
-          chd = "chezmoi diff";
-          che = "chezmoi edit --apply";
-          chf = "chezmoi forget";
-          chm = "chezmoi managed";
-          chu = "chezmoi unmanaged";
           cat = "bat -p";
           dg = "dragon -a -x";
           yd = "youtube-dl";
           k9 = "kill -9";
-          l = "exa -l --icons";
-          ll = "exa -la --icons";
+          l = "exa -l --git --icons";
+          ll = "exa -la --git --icons";
           lt = "exa -T";
           md = "mkdir -p";
           p = "gopass";
@@ -56,6 +45,21 @@
           wally = "wally-cli";
           wl = "watchlist";
           x = "xdg-open";
+          # Chezmoi
+          ch = "chezmoi";
+          cha = "chezmoi add";
+          chap = "chezmoi apply";
+          chc = "chezmoi cd";
+          chd = "chezmoi diff";
+          che = "chezmoi edit --apply";
+          chf = "chezmoi forget";
+          chm = "chezmoi managed";
+          chr = "chezmoi remove";
+          chra = "chezmoi re-add";
+          chu = "chezmoi unmanaged";
+          # CryFS
+          cf = "cryfs";
+          cfu = "cryfs-unmount";
           # Editor stuff
           v = "$EDITOR";
           # Flatpak
@@ -69,7 +73,6 @@
           gc = "git commit -a";
           gcp = "git commit -a; git push";
           gch = "git checkout";
-          gha = "git-hydra push";
           gpl = "git pull";
           gps = "git push";
           gpsu = "git push -u origin main";
@@ -78,16 +81,19 @@
           # Nix Stuff
           elpa = "nix-env -f '<nixpkgs>' -qaP -A emacsPackages.elpaPackages";
           melpa = "nix-env -f '<nixpkgs>' -qaP -A emacsPackages.melpaPackages";
+          nodep = "nix-env -f '<nixpkgs>' -qaP -A nodePackages";
           nba = "nix-build -A";
+          neq = "nix-env -q";
           nup = "sudo nixos-rebuild switch --upgrade";
           npg = "nix-prefetch-git";
           npgh = "nix-prefetch-github";
           nre = "sudo nixos-rebuild switch --fast";
           nrw = "nix-shell -p nixpkgs-review --run 'nixpkgs-review wip'";
-          ns = "nix search";
+          ns = "nix search nixpkgs";
           ni = "nixinfo";
           nin = "nixinstall";
           ne = "nix-env -e";
+          nr = "nix run";
           nsp = "nix-shell -p";
           nj = "nix-env -qaP --json";
           nx = "nix-env -qaP --description";
@@ -99,7 +105,7 @@
           # Trash
           te = "trash-empty";
           tr = "trash-restore";
-
+          tp = "trash-put";
         };
       };
       fzf = {
