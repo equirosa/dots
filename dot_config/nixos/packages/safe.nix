@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+  dash = "#!${pkgs.dash}/bin/dash";
+in
+{
   users.users.kiri.packages = with pkgs; [
     #### Browsers ####
     firefox
@@ -84,16 +88,16 @@
       exec speedtest
     '')
     (pkgs.writeScriptBin "dlp" ''
-      #!/usr/bin/env sh
+      ${dash}
       ${pkgs.yt-dlp}/bin/yt-dlp --sponsorblock-mark all --embed-subs --embed-metadata --restrict-filenames "$1"
     '')
     (pkgs.writeScriptBin "nixinfo" ''
-      #!/usr/bin/env sh
+      ${dash}
       information="$(nix-env -qaP --json "$1")"
       printf "$information" | ${pkgs.bat}/bin/bat -pl json
     '')
     (pkgs.writeScriptBin "destroy" ''
-      #!/bin/sh
+      ${dash}
       ${pkgs.coreutils}/bin/shred -zvu "$1"
     '')
     (pkgs.writeScriptBin "rem-lap" ''
@@ -107,11 +111,11 @@
       remmina -c "$chosen"
     '')
     (pkgs.writeScriptBin "nix-find-root" ''
-      #!/bin/sh
+      ${dash}
       ${pkgs.coreutils}/bin/readlink -f "$(which "$1")"
     '')
     (pkgs.writeScriptBin "show-ansi-escapes" ''
-      #!${pkgs.dash}/bin/dash
+      ${dash}
       for i in 30 31 32 33 34 35 36 37 38; do
         ${pkgs.coreutils}/bin/echo -e "\033[0;"$i"m Normal: (0;$i); \033[1;"$i"m Light: (1;$i);"
         done
