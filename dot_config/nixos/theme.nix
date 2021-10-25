@@ -19,6 +19,7 @@
       emacs-all-the-icons-fonts
       fira-code
       font-awesome
+      liberation_ttf
       nerdfonts
       twitter-color-emoji
     ];
