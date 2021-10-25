@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env nix-shell
+#! nix-shell -i sh -p freerdp
 
-xfreerdp --dynamic-resolution -u "Eduardo Quiros" \
+wlfreerdp --dynamic-resolution -u "Eduardo Quiros" \
 	-p "$(gopass show misc/gaplap)" \
-	-v "192.168.0.4" \
+	-v "192.168.0.11" \
 	--microphone "sys:pulse,format:1,quality:high" \
 	--sound "sys:pulse,format:1,quality:high"
