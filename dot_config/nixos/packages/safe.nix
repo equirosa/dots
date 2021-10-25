@@ -106,6 +106,11 @@ in
 
       remmina -c "$chosen"
     '')
+    (pkgs.writeScriptBin "nix-env-install" ''
+      ${dash}
+      [ -z "$1" ] && exit 1
+      [ -f "/etc/NIXOS" ] && nix-env -iA nixos."$1"
+    '')
     (pkgs.writeScriptBin "nix-find-root" ''
       ${dash}
       ${pkgs.coreutils}/bin/readlink -f "$(which "$1")"
