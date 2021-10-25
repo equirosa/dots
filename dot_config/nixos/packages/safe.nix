@@ -45,10 +45,6 @@ in
     nixpkgs-fmt
     shfmt
 
-    # LSPs
-    efm-langserver
-    rnix-lsp
-
     # Pictures
     imv # Image viewer
     timg # Terminal Image viewer

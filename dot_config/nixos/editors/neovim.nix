@@ -12,6 +12,11 @@
       require('theme')
       EOF
     '';
+    extraPackages = with pkgs; [
+      efm-langserver
+      sumneko-lua-language-server
+      rnix-lsp
+    ];
     plugins = with pkgs.vimPlugins; [
       packer-nvim
       direnv-vim
