@@ -7,11 +7,19 @@ show_tumbnail() {
 	${TERMIMG} "${CACHE}"
 }
 
+handle_mime () {
+	case "$(file -b --mime-type $1)" in
+		*/pdf ) pdftotext "$1" - ;;
+		* ) bat -pp "$1" ;;
+	esac
+}
+
 case "$1" in
 	*.pdf) pdftotext "$1" - ;;
 # 	*.png | *.jpg | *jpeg) timg "$1" ;;
 	#*.mkv | *.mp4 | *.webm) show_tumbnail "$@" ;;
 	*.rar | *.7z | *.zip | *.tar.*) arc ls "$1" | rev | cut -f1 | rev ;;
 	*.docx | *.odt) pandoc "$1" --to plain ;;
-	*) bat --plain --paging=never --color=always "$1" ;;
+	*) handle_mime "$@" ;;
 esac
+
