@@ -1,14 +1,16 @@
 { config, pkgs, ... }: {
-  nixpkgs.overlays = [
-    (self: super: {
-      neovim = super.neovim.override {
-        viAlias = true;
-        vimAlias = true;
-        withNodeJs = true;
-      };
-    })
-  ];
-  users.users.kiri.packages = with pkgs; [
-    neovim
-  ];
+  home-manager.users.kiri.programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    extraConfig = ''
+      lua << EOF
+      require('plugins')
+      require('settings')
+      require('mappings')
+      require('theme')
+      EOF
+    '';
+  };
 }
