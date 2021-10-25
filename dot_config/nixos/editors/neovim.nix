@@ -12,5 +12,11 @@
       require('theme')
       EOF
     '';
+    plugins = with pkgs.vimPlugins; [
+      packer-nvim
+      direnv-vim
+      nvim-tree-lua
+      nvim-web-devicons
+    ];
   };
 }
