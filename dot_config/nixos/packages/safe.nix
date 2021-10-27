@@ -17,8 +17,6 @@ in
     signal-desktop
 
     #### Dev Stuff ####
-    delta
-    gitMinimal
     lazygit
 
     #### File Management ####
